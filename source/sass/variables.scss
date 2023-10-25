@@ -18,12 +18,14 @@ $color-ghost-white:                #f8f9fc;
 $color-torch-red:                  #ed0233;
 $color-black-russian:              #030a1a;
 
+$color-neon-blue                    : #2c39f2;
+
 
 // Gradient
 
 $text-gradient:                    linear-gradient(128deg, #d10a42 0%, #0041ca 45.58%);
 $button-gradient:                  linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
-$header-gradient:                  conic-gradient(from 151deg at 16.03% 39.06%, #003d85 32.23deg, #b80027 313.30deg);
+$header-gradient:                  linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 
 // Typography
 // ---------------------------------
@@ -35,8 +37,11 @@ $fz-default:                        16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
-$ff-base-font:                      "Roboto Condensed", "Arial", sans-serif;
-$ff-secondary-font:                 "Alumni Sans", "Arial", sans-serif;
+$ff-alumnisans-semibold:            "Alumni Sans Semi Bold", "Arial", sans-serif;
+$ff-alumnisans-extrabold:           "Alumni Sans Extra Bold", "Arial", sans-serif;
+$ff-robotocondensed-light:          "Roboto Condensed Light", "Arial", sans-serif;
+$ff-roboto-condensed-regular:       "Roboto Condensed Regular", "Arial", sans-serif;
+$ff-robotocondensed-bold:           "Roboto Condensed Bold", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
@@ -54,15 +59,14 @@ $trans-600:                         0.6s $tf-default;
 // Viewports
 // ---------------------------------
 
-$vp-320:                            320px;
-$vp-375:                            375px;
-$vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1200:                           1200px;
-$vp-1280:                           1280px;
-$vp-1366:                           1366px;
-$vp-1440:                           1440px;
-$vp-1920:                           1920px;
+$vp-320                             : 320px;
+$vp-375                             : 375px;
+$vp-768                             : 768px;
+$vp-1024                            : 1024px;
+$vp-1280                            : 1280px;
+$vp-1366                            : 1366px;
+$vp-1440                            : 1440px;
+$vp-1920                            : 1920px;
 
 // Retina
 // ---------------------------------
