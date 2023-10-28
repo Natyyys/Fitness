@@ -4,9 +4,11 @@
   font-family: $ff-robotocondensed-bold;
   color: $color-default-white;
   letter-spacing: 0.6px;
-  display: inline-flex;
+  display: inline-block;
+  text-align: center;
   padding: 25px 54px;
   cursor: pointer;
+  user-select: none;
   text-transform: uppercase;
   border: 2px solid $color-default-white;
 
