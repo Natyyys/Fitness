@@ -1445,7 +1445,7 @@ button,
 }
 
 .gym {
-  padding: 120px 0 235px;
+  padding: 120px 103px 235px;
 }
 @media (max-width: 1365px) {
   .gym {
@@ -1547,7 +1547,7 @@ button,
   display: block;
   margin: 0;
 }
-@media (min-width: 1920px) and (min-width: 767px) {
+@media (max-width: 1920px) and (min-width: 767px) {
   .gym__description p br {
     display: none;
   }

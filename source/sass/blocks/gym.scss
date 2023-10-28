@@ -1,5 +1,5 @@
 .gym {
-  padding: 120px 0 235px;
+  padding: 120px 103px 235px;
 
   @include vp-1365 {
     padding: 100px 45px;
@@ -88,7 +88,7 @@
     display: block;
     margin: 0;
 
-    @media (min-width: 1920px) and (min-width: 767px) {
+    @media (max-width: 1920px) and (min-width: 767px) {
       br {
         display: none;
       }
