@@ -1224,7 +1224,7 @@ button,
 }
 @media (max-width: 1365px) {
   .hero__wrapper {
-    gap: 31px;
+    gap: 30px;
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
@@ -1253,6 +1253,14 @@ button,
   margin: auto 0 auto;
   row-gap: 51px;
 }
+@media (max-width: 1365px) {
+  .hero__title {
+    -webkit-column-gap: 26px;
+       -moz-column-gap: 26px;
+            column-gap: 26px;
+    row-gap: 50px;
+  }
+}
 @media (max-width: 767px) {
   .hero__title {
     -ms-grid-rows: 1fr -webkit-max-content;
@@ -1277,15 +1285,9 @@ button,
   text-align: right;
   margin: 0;
 }
-@media (max-width: 1365px) {
-  .hero__title-wrapper {
-    margin-left: 10px;
-  }
-}
 @media (max-width: 767px) {
   .hero__title-wrapper {
-    grid-column: 2/-1;
-    margin-top: 35px;
+    margin-top: 37px;
   }
 }
 .hero__title-wrapper p {
@@ -1328,7 +1330,6 @@ button,
 }
 @media (max-width: 767px) {
   .hero__title-wrapper h1 {
-    margin: 0;
     font-size: 62px;
     line-height: 1.12;
     letter-spacing: 1.86px;
@@ -1362,9 +1363,6 @@ button,
 }
 @media (max-width: 767px) {
   .hero__description {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
@@ -1417,11 +1415,7 @@ button,
 @media (max-width: 767px) {
   .hero__button-container {
     width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     grid-column: 1/-1;
-    margin: 0;
   }
 }
 
@@ -1430,14 +1424,15 @@ button,
 }
 @media (max-width: 1365px) {
   .hero__button {
-    width: 185px;
-    padding: 19px 32px;
+    min-width: 185px;
+    padding: 20px 32px 16px;
     min-height: 56px;
   }
 }
 @media (max-width: 767px) {
   .hero__button {
     min-width: 290px;
+    padding: 20px auto -16px;
   }
 }
 .hero__button:hover, .hero__button:focus {
