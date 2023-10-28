@@ -55,7 +55,38 @@
           </div>
         </div>
       </header>
-      <main>
+      <main class="main-contsiner">
+        <section class="gym">
+          <div class="gym__wrapper">
+            <div class="gym__description">
+              <h2>Тренажерный зал</h2>
+              <span>Просторный зал площадью 900 кв/м</span>
+              <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела<br> и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием<br> для всех спортсменов.</p>
+              <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий. </p>
+            </div>
+            <div class="gym__media">
+              <div class="gym__image">
+                <picture>
+                  <source media="(min-width: 1366px)" srcset="img/gym-desktop.jpg 1x, img/gym-desktop@2.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gym-tablet.jpg 1x, img/gym-tablet@2.jpg 2x">
+                  <img src="img/gym-phone.jpg" srcset="img/gym-phone@2x.jpg" width="320" height="313" alt=".">
+                </picture>
+              </div>
+              <div class="gym__video">
+                <picture>
+                  <source media="(min-width: 1366px)" srcset="img/poster-desktop.jpg 1x, img/poster-desktop@2.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/poster-tablet.jpg 1x, img/poster-tablet@2.jpg 2x">
+                  <img src="img/poster-phone.jpg" srcset="img/poster-phone@2x.jpg" width="320" height="167" alt="Ведио ролик о нашем зале.">
+                </picture>
+                <button class="gym__video-button" type="button" aria-label="Воспроизвести видео.">
+                  <svg class="gym__video-icon" role="img" focusable="false" width="13" height="15">
+                    <use href="img/sprite.svg#video-play"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
         <div class="container"></div>

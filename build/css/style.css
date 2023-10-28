@@ -1444,6 +1444,309 @@ button,
   color: #102654;
 }
 
+.gym {
+  padding: 120px 0 235px;
+}
+@media (max-width: 1365px) {
+  .gym {
+    padding: 100px 45px;
+  }
+}
+@media (max-width: 767px) {
+  .gym {
+    padding: 70px 0;
+  }
+}
+
+.gym__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 355px 1fr;
+  grid-template-columns: 355px 1fr;
+  gap: 145px;
+}
+@media (max-width: 1365px) {
+  .gym__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 37px;
+    text-align: center;
+  }
+}
+@media (max-width: 1365px) and (max-width: 767px) {
+  .gym__wrapper {
+    text-align: left;
+    gap: 53px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gym__description {
+    padding: 0 15px;
+  }
+}
+.gym__description h2 {
+  font-family: "Alumni Sans Semi Bold", "Arial", sans-serif;
+  font-size: 54px;
+  line-height: 1;
+  letter-spacing: 1.62px;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-top: -5px;
+  padding-right: 20px;
+}
+@media (max-width: 1365px) {
+  .gym__description h2 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-top: 6px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__description h2 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    margin-bottom: 13px;
+    padding: 0;
+    padding-top: 6px;
+  }
+}
+.gym__description span {
+  font-family: "Roboto Condensed Regular", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 93px;
+}
+@media (max-width: 1365px) {
+  .gym__description span {
+    font-size: 20px;
+    margin-bottom: 34px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__description span {
+    font-size: 18px;
+    line-height: 1.1;
+    margin-bottom: 36px;
+  }
+}
+.gym__description p {
+  font-family: "Roboto Condensed Light", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+  margin: 0;
+}
+@media (min-width: 1920px) and (min-width: 767px) {
+  .gym__description p br {
+    display: none;
+  }
+}
+@media (max-width: 1365px) {
+  .gym__description p {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__description p {
+    font-size: 14px;
+    line-height: 1.57;
+    padding: 0;
+  }
+}
+.gym__description p + p {
+  margin-top: 9px;
+}
+@media (max-width: 1365px) {
+  .gym__description p + p {
+    display: none;
+  }
+}
+
+.gym__media {
+  position: relative;
+}
+
+.gym__image {
+  height: 401px;
+}
+@media (max-width: 1365px) {
+  .gym__image {
+    height: 345px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__image {
+    height: 100%;
+    margin-bottom: 40px;
+  }
+}
+.gym__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-color: #f8f9fc;
+}
+
+.gym__video {
+  position: absolute;
+  top: 288px;
+  left: 18%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (max-width: 1365px) {
+  .gym__video {
+    top: 261px;
+    left: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .gym__video {
+    position: relative;
+    right: 0%;
+    top: 0;
+    width: 100%;
+  }
+}
+.gym__video img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.gym__video-button {
+  padding: 0;
+  position: absolute;
+  content: "";
+  width: 72px;
+  height: 72px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  z-index: 3;
+  cursor: pointer;
+}
+.gym__video-button svg {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-35%, -50%);
+      -ms-transform: translate(-35%, -50%);
+          transform: translate(-35%, -50%);
+  z-index: 5;
+}
+@media (max-width: 1365px) {
+  .gym__video-button svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+.gym__video-button::before {
+  display: block;
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 50%;
+}
+@media (max-width: 1365px) {
+  .gym__video-button::before {
+    width: 52px;
+    height: 52px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+.gym__video-button::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: translate(-14%, -14%);
+      -ms-transform: translate(-14%, -14%);
+          transform: translate(-14%, -14%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  inset: 0;
+  background: transparent;
+  border: 2px solid rgba(237, 2, 51, 0.2);
+}
+@media (max-width: 1365px) {
+  .gym__video-button::after {
+    width: 72px;
+    height: 72px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+.gym__video-button:hover::before, .gym__video-button:focus::before, .gym__video-button:focus-visible::before, .gym__video-button:active::before {
+  background: #ffffff;
+  outline: none;
+}
+.gym__video-button:disabled::before {
+  background: transparent;
+  outline: none;
+}
+.gym__video-button:hover::after, .gym__video-button:focus::after, .gym__video-button:focus-visible::after, .gym__video-button:active::after {
+  opacity: 1;
+  border: 2px solid #102654;
+  outline: none;
+}
+.gym__video-button:disabled::after {
+  border: 2px solid rgba(16, 38, 84, 0.4);
+  background: transparent;
+  outline: none;
+}
+.gym__video-button:hover svg, .gym__video-button:focus svg, .gym__video-button:focus-visible svg, .gym__video-button:active svg {
+  color: #102654;
+  outline: none;
+}
+.gym__video-button:disabled svg {
+  color: rgba(16, 38, 84, 0.4);
+  outline: none;
+}
+.gym__video-button:focus-visible {
+  outline: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
