@@ -72,13 +72,13 @@
                   <img src="img/gym-phone.jpg" srcset="img/gym-phone@2x.jpg" width="320" height="313" alt=".">
                 </picture>
               </div>
-              <div class="gym__video">
+              <div class="gym__video" data-video>
                 <picture>
                   <source media="(min-width: 1366px)" srcset="img/poster-desktop.jpg 1x, img/poster-desktop@2.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/poster-tablet.jpg 1x, img/poster-tablet@2.jpg 2x">
-                  <img src="img/poster-phone.jpg" srcset="img/poster-phone@2x.jpg" width="320" height="167" alt="Ведио ролик о нашем зале.">
+                  <img src="img/poster-phone.jpg" srcset="img/poster-phone@2x.jpg" width="320" height="167" alt="Ведио ролик о нашем зале." data-video-poster>
                 </picture>
-                <button class="gym__video-button" type="button" aria-label="Воспроизвести видео.">
+                <button class="gym__video-button" type="button" aria-label="Воспроизвести видео." data-video-button>
                   <svg class="gym__video-icon" role="img" focusable="false" width="13" height="15">
                     <use href="img/sprite.svg#video-play"></use>
                   </svg>
