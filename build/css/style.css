@@ -1636,6 +1636,7 @@ button,
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  background-color: rgba(20, 54, 122, 0.5);
 }
 
 @media (max-width: 1365px) {
