@@ -2318,6 +2318,9 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
