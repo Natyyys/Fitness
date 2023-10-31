@@ -95,7 +95,7 @@
     display: block;
     margin: 0;
 
-    @media (max-width: 1920px) and (min-width: 767px) {
+    @media screen and (min-width: 767px) {
       br {
         display: none;
       }
@@ -109,6 +109,7 @@
       font-size: 14px;
       line-height: 1.57;
       padding: 0;
+      max-width: 320px;
     }
   }
 

@@ -1639,7 +1639,7 @@ button,
   display: block;
   margin: 0;
 }
-@media (max-width: 1920px) and (min-width: 767px) {
+@media screen and (min-width: 767px) {
   .gym__description p br {
     display: none;
   }
@@ -1654,6 +1654,7 @@ button,
     font-size: 14px;
     line-height: 1.57;
     padding: 0;
+    max-width: 320px;
   }
 }
 .gym__description p + p {
@@ -1895,7 +1896,7 @@ button,
 }
 @media (max-width: 767px) {
   .subscription {
-    padding: 74px 15px 68px;
+    padding: 74px 15px 70px;
   }
 }
 
@@ -2001,6 +2002,20 @@ button,
   margin-bottom: -2px;
 }
 
+.subscription__content {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+@media (max-width: 1365px) {
+  .subscription__content {
+    max-width: 440px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription__content {
+    max-width: 290px;
+  }
+}
 .subscription__content ul {
   margin: 0;
   padding: 0;
@@ -2015,6 +2030,7 @@ button,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 40px;
+  margin: 0 auto;
 }
 @media (max-width: 1365px) {
   .subscription__content ul {
@@ -2083,7 +2099,7 @@ button,
 @media (max-width: 767px) {
   .subscription__content li:hover a, .subscription__content li:focus a, .subscription__content li:focus-within a, .subscription__content li:focus-visible a {
     font-family: "Roboto Condensed Bold", "Arial", sans-serif;
-    padding: 20px 40px;
+    padding: 22px 40px;
   }
 }
 .subscription__content li h3 {
@@ -2141,7 +2157,7 @@ button,
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    gap: 14px;
+    gap: 10px;
     padding-top: 56px;
     padding-bottom: 6px;
     margin: 0;
@@ -2150,19 +2166,24 @@ button,
 @media (max-width: 767px) {
   .subscription__content li span {
     font-size: 48px;
-    margin-top: 46px;
-    margin-bottom: 5px;
-  }
-  .subscription__content li span svg {
-    width: 24px;
-    height: 33px;
+    padding-top: 47px;
+    padding-bottom: 4px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
-@media (max-width: 767px) and (max-width: 1365px) {
+@media (max-width: 1365px) {
   .subscription__content li span svg {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+}
+@media (max-width: 767px) {
+  .subscription__content li span svg {
+    width: 24px;
+    height: 33px;
   }
 }
 .subscription__content li span::before {

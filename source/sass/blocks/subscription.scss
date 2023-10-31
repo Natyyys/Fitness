@@ -8,7 +8,7 @@
   }
 
   @include vp-767 {
-    padding: 74px 15px 68px;
+    padding: 74px 15px 70px;
   }
 }
 
@@ -95,6 +95,17 @@
 }
 
 .subscription__content {
+  max-width: 1160px;
+  margin: 0 auto;
+
+  @include vp-1365 {
+    max-width: 440px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -103,6 +114,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
+    margin: 0 auto;
 
     @include vp-1365 {
       flex-direction: column;
@@ -128,10 +140,7 @@
     @include vp-1365 {
       width: 440px;
       min-height: fit-content;
-      // padding-top: 65px;
-      // padding-bottom: 58px;
       gap: 18px;
-    //   padding: 59px 110px 58px;
     }
 
     @include vp-767 {
@@ -160,7 +169,7 @@
 
         @include vp-767 {
           font-family: $ff-robotocondensed-bold;
-          padding: 20px 40px;
+          padding: 22px 40px;
         }
       }
     }
@@ -210,7 +219,7 @@
         flex-shrink: 0;
         width: 166px;
         align-self: center;
-        gap: 14px;
+        gap: 10px;
         padding-top: 56px;
         padding-bottom: 6px;
         margin: 0;
@@ -218,18 +227,22 @@
 
       @include vp-767 {
         font-size: 48px;
-        margin-top: 46px;
-        margin-bottom: 5px;
+        padding-top: 47px;
+        padding-bottom: 4px;
+        width: fit-content;
+      }
 
-        svg {
+      svg {
+        @include vp-1365 {
+          align-self: center;
+        }
+
+        @include vp-767 {
           width: 24px;
           height: 33px;
-
-          @include vp-1365 {
-            align-self: center;
-          }
         }
       }
+
 
       &::before {
         position: absolute;
