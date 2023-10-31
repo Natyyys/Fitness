@@ -577,7 +577,9 @@ button,
   font-family: "Roboto Condensed Bold", "Arial", sans-serif;
   color: #ffffff;
   letter-spacing: 0.6px;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   text-align: center;
   padding: 25px 54px;
   cursor: pointer;
@@ -1235,6 +1237,7 @@ button,
 @media (max-width: 767px) {
   .hero__wrapper {
     display: block;
+    max-width: 100%;
     margin-bottom: 70px;
   }
 }
@@ -1267,9 +1270,13 @@ button,
     -ms-grid-rows: 1fr max-content;
     grid-template-rows: 1fr -webkit-max-content;
     grid-template-rows: 1fr max-content;
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+    -webkit-column-gap: initial;
+       -moz-column-gap: initial;
+            column-gap: initial;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
     row-gap: 60px;
   }
 }
@@ -1432,7 +1439,9 @@ button,
 @media (max-width: 767px) {
   .hero__button {
     min-width: 290px;
-    padding: 20px auto -16px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .hero__button:hover, .hero__button:focus {
@@ -1449,7 +1458,7 @@ button,
 }
 @media (max-width: 1365px) {
   .gym {
-    padding: 100px 45px;
+    padding: 100px 45px 183px;
   }
 }
 @media (max-width: 767px) {
@@ -1464,6 +1473,8 @@ button,
   -ms-grid-columns: 355px 1fr;
   grid-template-columns: 355px 1fr;
   gap: 145px;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 @media (max-width: 1365px) {
   .gym__wrapper {
@@ -1487,6 +1498,12 @@ button,
   }
 }
 
+@media (max-width: 1365px) {
+  .gym__description {
+    max-width: 678px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 767px) {
   .gym__description {
     padding: 0 15px;
@@ -1579,6 +1596,7 @@ button,
 
 .gym__image {
   height: 401px;
+  margin: 0 auto;
 }
 @media (max-width: 1365px) {
   .gym__image {
@@ -1593,13 +1611,23 @@ button,
 }
 .gym__image img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   background-color: #f8f9fc;
+}
+@media (max-width: 1365px) {
+  .gym__image img {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .gym__image img {
+    width: 100%;
+  }
 }
 
 .gym__video {
