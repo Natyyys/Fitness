@@ -2157,7 +2157,7 @@ button,
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    gap: 10px;
+    gap: 14px;
     padding-top: 56px;
     padding-bottom: 6px;
     margin: 0;
@@ -2171,6 +2171,7 @@ button,
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    gap: 10px;
   }
 }
 @media (max-width: 1365px) {
@@ -2278,6 +2279,16 @@ button,
 .supergames {
   padding: 120px 103px;
 }
+@media (max-width: 1365px) {
+  .supergames {
+    padding: 100px 45px;
+  }
+}
+@media (max-width: 767px) {
+  .supergames {
+    padding: 70px 15px;
+  }
+}
 
 .supergames__container {
   max-width: 1160px;
@@ -2289,6 +2300,28 @@ button,
   -ms-grid-columns: 500px 660px;
   grid-template-columns: 500px 660px;
 }
+@media (max-width: 1365px) {
+  .supergames__container {
+    max-width: 678px;
+    -ms-grid-columns: -webkit-min-content 1fr;
+    -ms-grid-columns: min-content 1fr;
+    grid-template-columns: -webkit-min-content 1fr;
+    grid-template-columns: min-content 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .supergames__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 
 .supergames__beginning span {
   font-family: "Roboto Condensed Light", "Arial", sans-serif;
@@ -2297,16 +2330,41 @@ button,
   border-bottom: 1px solid #ffffff;
   padding-bottom: 8px;
 }
+@media (max-width: 1365px) {
+  .supergames__beginning span {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .supergames__beginning span {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
 .supergames__beginning strong {
   font-family: "Roboto Condensed Bold", "Arial", sans-serif;
   font-size: 40px;
   line-height: 1;
   padding-top: 4px;
 }
+@media (max-width: 1365px) {
+  .supergames__beginning strong {
+    font-size: 24px;
+    padding-top: 2px;
+    letter-spacing: 0;
+  }
+}
 .supergames__beginning small {
   font-size: 14px;
   line-height: 1.35;
   padding-top: 8px;
+}
+@media (max-width: 1365px) {
+  .supergames__beginning small {
+    font-size: 10px;
+    line-height: 1;
+    padding: 4px;
+  }
 }
 
 .supergames__info {
@@ -2324,6 +2382,28 @@ button,
           column-gap: 68px;
   row-gap: 23px;
 }
+@media (max-width: 1365px) {
+  .supergames__info {
+    padding: 40px 45px 45px;
+    -ms-grid-columns: 106px 56px;
+    grid-template-columns: 106px 56px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    row-gap: 6px;
+  }
+}
+@media (max-width: 1365px) and (max-width: 767px) {
+  .supergames__info {
+    -ms-grid-columns: 117px 56px;
+    grid-template-columns: 117px 56px;
+    padding: 40px;
+    -webkit-column-gap: 37px;
+       -moz-column-gap: 37px;
+            column-gap: 37px;
+    row-gap: 12px;
+  }
+}
 .supergames__info h2 {
   font-family: "Alumni Sans Semi Bold", "Arial", sans-serif;
   font-size: 82px;
@@ -2331,6 +2411,13 @@ button,
   letter-spacing: 2.46px;
   text-transform: uppercase;
   margin: 0;
+}
+@media (max-width: 1365px) {
+  .supergames__info h2 {
+    font-size: 48px;
+    line-height: 0.96;
+    letter-spacing: 1.44px;
+  }
 }
 .supergames__info p {
   font-family: "Roboto Condensed Light", "Arial", sans-serif;
@@ -2340,11 +2427,29 @@ button,
   grid-column: 1/-1;
   margin-bottom: 32px;
 }
+@media (max-width: 1365px) {
+  .supergames__info p {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .supergames__info p {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-right: 30px;
+    margin-bottom: 9px;
+  }
+}
 .supergames__info a {
   grid-column: 1/-1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (max-width: 1365px) {
+  .supergames__info a {
+    padding: 20px 30px;
+  }
 }
 .supergames__info a:hover, .supergames__info a:focus {
   background-color: #ffffff;
@@ -2368,6 +2473,28 @@ button,
      -moz-column-gap: 6px;
           column-gap: 6px;
   margin-bottom: 18px;
+}
+@media (max-width: 1365px) {
+  .supergames__date {
+    -ms-grid-columns: 13px 26px;
+    grid-template-columns: 13px 26px;
+    -ms-grid-rows: (24px)[2];
+    grid-template-rows: repeat(2, 24px);
+    -webkit-column-gap: 2px;
+       -moz-column-gap: 2px;
+            column-gap: 2px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .supergames__date {
+    -ms-grid-rows: (20px)[2];
+    grid-template-rows: repeat(2, 20px);
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+    margin-bottom: 13px;
+  }
 }
 .supergames__date span {
   grid-column: 1/-1;
