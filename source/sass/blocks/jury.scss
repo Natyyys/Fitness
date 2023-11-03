@@ -1,0 +1,274 @@
+.jury {
+  h2 {
+    font-family: $ff-alumnisans-semibold;
+    font-size: 54px;
+    line-height: 1;
+    letter-spacing: 1.62px;
+    margin: 0;
+    margin-bottom: 45px;
+
+    @include vp-1365 {
+      font-size: 42px;
+      letter-spacing: 1.26px;
+      padding-top: 1px;
+      margin-bottom: 39px;
+      font-size: 42px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      letter-spacing: 0.96px;
+      margin-bottom: 41px;
+    }
+  }
+}
+
+.jury__wrapper {
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+
+  @include vp-1365 {
+    width: auto;
+    height: 100%;
+    margin: 0 100px 100px;
+  }
+
+  @include vp-767 {
+    margin: 0 47px 70px;
+  }
+}
+
+.jury__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jury__item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 260/294;
+
+  @include vp-1365 {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 268/294;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include vp-374 {
+    aspect-ratio: 226/274;
+  }
+
+  h3 {
+    font-family: $ff-robotocondensed-regular;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    color: $color-default-white;
+    z-index: 1;
+
+    @include vp-1365 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+    }
+  }
+
+  img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+    @include vp-1365 {
+      min-height: 294px;
+    }
+
+    @include vp-767 {
+      min-height: 274px;
+    }
+  }
+}
+
+.jury__item:hover h3,
+.jury__item:focus h3 {
+  display: none;
+}
+
+.jury__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: none;
+  padding: 45px 20px 50px;
+  color: $color-default-white;
+  text-align: center;
+  background-color: $color-sapphire-89;
+
+  h4 {
+    font-family: $ff-robotocondensed-regular;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  span {
+    color: $color-spindle;
+    display: block;
+    margin-bottom: 34px;
+
+    @include vp-1365 {
+      margin-left: -7px;
+      margin-bottom: 34px;
+    }
+  }
+
+  ul {
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    padding-left: 47px;
+    list-style: none;
+
+    @include vp-1365 {
+      padding-left: 48px;
+    }
+
+    @include vp-1365 {
+      padding-left: 51px;
+    }
+
+    @include vp-767 {
+      padding-left: 23px;
+    }
+  }
+
+  li {
+    position: relative;
+  }
+
+  li::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-default-white;
+    left: -17px;
+    top: 7px;
+  }
+}
+
+.jury__item:focus .jury__info,
+.jury__item:hover .jury__info {
+  display: block;
+  z-index: 30;
+}
+
+.jury__button {
+  display: block;
+  top: 48%;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  color: $color-sapphire;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
+
+  @include vp-767 {
+    top: 51%;
+    width: 40px;
+    height: 40px;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 16px;
+    height: 32px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 19px;
+    }
+  }
+
+  &--prev {
+    left: -74px;
+
+    @include vp-767 {
+      left: -43px;
+    }
+
+    svg {
+      transform: translateX(-13%);
+    }
+  }
+
+  &--next {
+    right: -74px;
+
+    @include vp-767 {
+      right: -43px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-sapphire;
+    border-radius: 50%;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background-color: $color-sapphire;
+    border-radius: 50%;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.jury__button--next svg {
+  transform: rotate(180deg) translateX(-13%);
+}
+
+.jury__button::after {
+  content: none;
+}
