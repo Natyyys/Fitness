@@ -111,7 +111,15 @@
 
 .jury__item:hover h3,
 .jury__item:focus h3 {
-  display: none;
+  @media screen and (min-width: 1365px) {
+    display: none;
+  }
+}
+
+.jury__item:active h3 {
+  @include vp-1365 {
+    display: none;
+  }
 }
 
 .jury__info {
@@ -191,8 +199,17 @@
 
 .jury__item:focus .jury__info,
 .jury__item:hover .jury__info {
-  display: block;
-  z-index: 30;
+  @media screen and (min-width: 1365px) {
+    display: block;
+    z-index: 30;
+  }
+}
+
+.jury__item:active .jury__info {
+  @include vp-1365 {
+    display: block;
+    z-index: 30;
+  }
 }
 
 .jury__button {

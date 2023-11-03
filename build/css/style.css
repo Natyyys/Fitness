@@ -3522,9 +3522,17 @@ button,
   }
 }
 
-.jury__item:hover h3,
+@media screen and (min-width: 1365px) {
+  .jury__item:hover h3,
 .jury__item:focus h3 {
-  display: none;
+    display: none;
+  }
+}
+
+@media (max-width: 1365px) {
+  .jury__item:active h3 {
+    display: none;
+  }
 }
 
 .jury__info {
@@ -3607,10 +3615,19 @@ button,
   top: 7px;
 }
 
-.jury__item:focus .jury__info,
+@media screen and (min-width: 1365px) {
+  .jury__item:focus .jury__info,
 .jury__item:hover .jury__info {
-  display: block;
-  z-index: 30;
+    display: block;
+    z-index: 30;
+  }
+}
+
+@media (max-width: 1365px) {
+  .jury__item:active .jury__info {
+    display: block;
+    z-index: 30;
+  }
 }
 
 .jury__button {
