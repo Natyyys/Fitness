@@ -547,127 +547,159 @@
           <h2>Вопросы и ответы</h2>
           <div class="faq__wrapper tabs" data-tabs="parent" data-delay="300">
             <div class="faq__controls" ata-tabs="controls">
-              <button class="faq__control btn" type="button" data-tabs="control">Центр</button>
+              <button class="faq__control btn is-active" type="button" data-tabs="control">Центр</button>
               <button class="faq__control btn" type="button" data-tabs="control">Абонемент</button>
               <button class="faq__control btn" type="button" data-tabs="control">Услуги</button>
               <button class="faq__control btn" type="button" data-tabs="control">Правила</button>
             </div>
             <div class="faq__content" data-tabs="content">
-              <ul data-tabs="element" data-accordion="parent">
-                <li data-accordion="element">
+              <ul class="accordion" data-tabs="element" data-accordion="parent">
+                <li class="accordion__item is-active" data-accordion="element">
                   <h3>Как стать членом фитнес-центра?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Где можно посмотреть расписание?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Расписание можно посмотреть в соотвестствующем разделе на сайте или позвонить по нам телефону.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
-                    <p>Кулеры есть в каждом залею полотенца выдаются при каждом посещении.</p>
+                    <p>Кулеры есть в каждом зале. Полотенца выдаются при каждом посещении.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>В клубе работают более 50 тренеров различной специализации.</p>
                   </div>
                 </li>
               </ul>
               <ul data-tabs="element" data-accordion="parent">
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Занятия с тренером входят в абонемент?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Можно ли заморозить абонемент?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Действующий абонемент можно заморозить не более 2 раз на срок суммарно 60 дней.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Посещения не ограничены по времени и количеству групповых занятий в день посещения.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Что такое семейный доступ и доступ для друзей?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>На тарифе "полны день" есть три бесплатных гостевых визитов для членов семьи и друзей, которые можно зарегистрировать в будние дни с 10.00-17.00, в выходные с 10.00-22.00.</p>
                   </div>
                 </li>
               </ul>
               <ul data-tabs="element" data-accordion="parent">
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Да. О проведении соревнований мы оповещаем наших гостей заранее. Так же за информацией вы можете обратиться к тренеру или администратору</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Можно ли приобрести в центре спортивное питание?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Да. В нашем клубе есть специализированный магазин спортивного питания.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Есть ли в центре детская комната?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Да. За подробной информацией вы можете обратиться к администратору.</p>
                   </div>
                 </li>
               </ul>
               <ul data-tabs="element" data-accordion="parent">
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Есть в фитнес-центре дресс-код?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Можно ли приводить с собой детей на тренировки?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Можно на определенные виды тренировок.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Какие дополнительные правила посещения центра?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Запрещено посещение зала в состоянии алкогольного или наркотического опьянения.</p>
                   </div>
                 </li>
-                <li data-accordion="element">
+                <li class="accordion__item" data-accordion="element">
                   <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
-                  <button type="button" data-accordion="button">+</button>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <span class="visually-hidden">Открыть или закрыть ответ</span>
+                  </button>
                   <div data-accordion="content">
                     <p>Да. Вы можете принести справку от своего врача или воспользоваться услугами врача в нашем центре при первом посещении.</p>
                   </div>

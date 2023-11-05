@@ -9,7 +9,7 @@
     line-height: 1;
     letter-spacing: 1.62px;
     margin: 0;
-    margin-bottom: 51px;
+    margin-bottom: 50px;
   }
 }
 
@@ -25,6 +25,7 @@
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
+  margin-top: 1px;
 
   button {
     justify-content: center;
@@ -35,7 +36,7 @@
     font-family: $ff-robotocondensed-regular;
     font-size: 18px;
     line-height: 1;
-    padding: 17px 46px;
+    padding: 19px 46px 15px;
 
     &:hover,
     &:focus {
@@ -43,7 +44,8 @@
       opacity: 1;
     }
 
-    &:active {
+    &:active,
+    &.is-active {
       color: $color-default-white;
       background: $button-gradient;
       padding: 18px 48px;
@@ -72,16 +74,19 @@
     border-top: 1px solid $color-resolution-blue-20;
   }
 
-  h3 {
-    margin: 0;
-    font-family: $ff-robotocondensed-regular;
-    font-size: 24px;
-    line-height: 1;
-    padding: 31px 0;
-  }
+  // h3 {
+  //   margin: 0;
+  //   font-family: $ff-robotocondensed-regular;
+  //   font-size: 24px;
+  //   line-height: 1;
+  //   width: 95%;
+  //   padding: 32px 20px 31px 0;
+  // }
 
-  p {
-    font-size: 18px;
-    line-height: 1.33;
-  }
+  // p {
+  //   font-size: 18px;
+  //   line-height: 1.33;
+  //   margin: 0;
+  //   padding: 12px 210px 23px 0;
+  // }
 }

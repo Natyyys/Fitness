@@ -4434,7 +4434,7 @@ button,
   line-height: 1;
   letter-spacing: 1.62px;
   margin: 0;
-  margin-bottom: 51px;
+  margin-bottom: 50px;
 }
 
 .faq__wrapper {
@@ -4457,6 +4457,7 @@ button,
       flex-wrap: wrap;
   gap: 10px;
   width: 100%;
+  margin-top: 1px;
 }
 .faq__controls button {
   -webkit-box-pack: center;
@@ -4469,13 +4470,13 @@ button,
   font-family: "Roboto Condensed Regular", "Arial", sans-serif;
   font-size: 18px;
   line-height: 1;
-  padding: 17px 46px;
+  padding: 19px 46px 15px;
 }
 .faq__controls button:hover, .faq__controls button:focus {
   border-color: #102654;
   opacity: 1;
 }
-.faq__controls button:active {
+.faq__controls button:active, .faq__controls button.is-active {
   color: #ffffff;
   background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
   padding: 18px 48px;
@@ -4498,43 +4499,92 @@ button,
 .faq__content li + li {
   border-top: 1px solid rgba(28, 51, 116, 0.2);
 }
-.faq__content h3 {
+
+.accordion__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1px;
+}
+.accordion__item h3 {
   margin: 0;
   font-family: "Roboto Condensed Regular", "Arial", sans-serif;
   font-size: 24px;
   line-height: 1;
-  padding: 31px 0;
+  width: 95%;
+  padding: 33px 20px 31px 0;
 }
-.faq__content p {
+.accordion__item p {
   font-size: 18px;
   line-height: 1.33;
+  margin: 0;
+  padding: 12px 210px 22px 0;
+}
+.accordion__item.is-active {
+  height: 100%;
+}
+.accordion__item.is-active h3 {
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+}
+.accordion__item.is-active p {
+  padding-top: 0;
+}
+.accordion__item:first-child button {
+  margin-top: 24px;
+}
+.accordion__item:last-child h3 {
+  padding-bottom: 32px;
 }
 
-.accordion {
-  margin: 0 auto 50px auto;
-}
-.accordion .accordion {
-  width: 90%;
-  margin: 0 auto;
-}
-.accordion__element:last-child {
-  margin-bottom: 0;
-}
-.accordion__element {
-  margin-bottom: 34px;
-  padding: 10px;
-}
-.accordion__element.is-active > .accordion__button {
-  opacity: 0.5;
-}
 .accordion__button {
-  width: 100%;
-  padding: 10px;
-  text-transform: uppercase;
-  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #102654;
+  position: relative;
+  margin-top: 25px;
 }
-.accordion__wrapper {
-  padding: 10px;
+.accordion__button::before, .accordion__button::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #102654;
+  right: 50%;
+  top: 18px;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+.accordion__button::after {
+  right: 25%;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.accordion__button:hover, .accordion__button:focus .accordion__button:focus-visible {
+  background-color: #102654;
+  outline: none;
+}
+.accordion__button:hover::before, .accordion__button:hover::after, .accordion__button:focus .accordion__button:focus-visible::before, .accordion__button:focus .accordion__button:focus-visible::after {
+  background-color: #ffffff;
+}
+
+.accordion__item.is-active .accordion__button {
+  background: #102654;
+}
+.accordion__item.is-active .accordion__button::before {
+  background: #ffffff;
+}
+.accordion__item.is-active .accordion__button::after {
+  display: none;
 }
 
 /* @mixin hover-focus {
