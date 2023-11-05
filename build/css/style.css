@@ -2965,12 +2965,12 @@ button,
     padding: 45px 35px 43px;
   }
 }
-.subscription__content li:hover, .subscription__content li:focus, .subscription__content li:focus-within, .subscription__content li:focus-visible {
+.subscription__content li.is-active, .subscription__content li:hover, .subscription__content li:focus, .subscription__content li:focus-within, .subscription__content li:focus-visible {
   border: 7px solid;
   -o-border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
      border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
 }
-.subscription__content li:hover a, .subscription__content li:focus a, .subscription__content li:focus-within a, .subscription__content li:focus-visible a {
+.subscription__content li.is-active a, .subscription__content li:hover a, .subscription__content li:focus a, .subscription__content li:focus-within a, .subscription__content li:focus-visible a {
   color: #ffffff;
   background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
   padding: 27px 44px;
@@ -2978,13 +2978,13 @@ button,
   outline: none;
 }
 @media (max-width: 1365px) {
-  .subscription__content li:hover a, .subscription__content li:focus a, .subscription__content li:focus-within a, .subscription__content li:focus-visible a {
+  .subscription__content li.is-active a, .subscription__content li:hover a, .subscription__content li:focus a, .subscription__content li:focus-within a, .subscription__content li:focus-visible a {
     font-family: "Roboto Condensed Regular", "Arial", sans-serif;
     padding: 22px 44px;
   }
 }
 @media (max-width: 767px) {
-  .subscription__content li:hover a, .subscription__content li:focus a, .subscription__content li:focus-within a, .subscription__content li:focus-visible a {
+  .subscription__content li.is-active a, .subscription__content li:hover a, .subscription__content li:focus a, .subscription__content li:focus-within a, .subscription__content li:focus-visible a {
     font-family: "Roboto Condensed Bold", "Arial", sans-serif;
     padding: 22px 40px;
   }
