@@ -1,0 +1,87 @@
+.faq {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-ghost-white;
+
+  h2 {
+    font-family: $ff-alumnisans-semibold;
+    font-size: 54px;
+    line-height: 1;
+    letter-spacing: 1.62px;
+    margin: 0;
+    margin-bottom: 51px;
+  }
+}
+
+.faq__wrapper {
+  display: grid;
+  grid-template-columns: 260px 860px;
+  gap: 40px;
+}
+
+.faq__controls {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+
+  button {
+    justify-content: center;
+    border: 1px solid $color-sapphire-20;
+    color: $color-sapphire;
+    background-color: transparent;
+    text-transform: capitalize;
+    font-family: $ff-robotocondensed-regular;
+    font-size: 18px;
+    line-height: 1;
+    padding: 17px 46px;
+
+    &:hover,
+    &:focus {
+      border-color: $color-sapphire;
+      opacity: 1;
+    }
+
+    &:active {
+      color: $color-default-white;
+      background: $button-gradient;
+      padding: 18px 48px;
+      border: 0;
+      outline: 0;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+.faq__content {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid $color-resolution-blue-20;
+    border-bottom: 1px solid $color-resolution-blue-20;
+  }
+
+  li + li {
+    border-top: 1px solid $color-resolution-blue-20;
+  }
+
+  h3 {
+    margin: 0;
+    font-family: $ff-robotocondensed-regular;
+    font-size: 24px;
+    line-height: 1;
+    padding: 31px 0;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}

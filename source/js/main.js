@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initJurySlider} from './modules/slider';
 import {initVideo} from './modules/video-player';
 import {initTabs} from './modules/tabs/init-tabs';
+import {initAccordions} from './modules/accordion/init-accordion';
 
 // ---------------------------------
 
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initTabs();
+  initAccordions();
 
   // Modules
   initVideo();
