@@ -4181,18 +4181,18 @@ button,
   font-size: 18px;
   line-height: 1.33;
   margin: 0;
-  margin-bottom: 175px;
+  margin-bottom: 165px;
 }
 @media (max-width: 1365px) {
   .promotion__wrapper p {
-    margin-bottom: 187px;
+    margin-bottom: 177px;
   }
 }
 @media (max-width: 767px) {
   .promotion__wrapper p {
     font-size: 16px;
     line-height: 1.25;
-    margin-bottom: 37px;
+    margin-bottom: 27px;
   }
 }
 .promotion__wrapper a {
@@ -4201,12 +4201,47 @@ button,
   line-height: 1;
   letter-spacing: 0.7px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: inherit;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #ffffff;
+  padding: 10px;
+  margin-left: -10px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .promotion__wrapper a {
+    margin: 0;
+  }
+}
+.promotion__wrapper a::after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 20px);
+  height: 1px;
+  background-color: #ffffff;
+  bottom: 7px;
+  left: 10px;
+}
+.promotion__wrapper a:not([disabled]):focus {
+  outline: 1px solid #ffffff;
+}
+.promotion__wrapper a:not([disabled]):focus::after {
+  display: none;
+}
+.promotion__wrapper a:hover {
+  opacity: 0.8;
+}
+.promotion__wrapper a:focus {
+  outline: #ffffff;
+}
+.promotion__wrapper a:active {
+  opacity: 1;
+}
+.promotion__wrapper a[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
 }
 .promotion__wrapper img {
   display: block;
@@ -4241,7 +4276,7 @@ button,
 .promotion__info {
   background-color: #ed0233;
   color: #ffffff;
-  padding: 40px 45px 45px;
+  padding: 40px 45px 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4255,6 +4290,7 @@ button,
 @media (max-width: 1365px) {
   .promotion__info {
     padding: 45px;
+    padding-bottom: 35px;
   }
 }
 @media (max-width: 767px) {
@@ -4264,7 +4300,7 @@ button,
         -ms-flex-align: center;
             align-items: center;
     padding-top: 46px;
-    padding-bottom: 46px;
+    padding-bottom: 39px;
   }
 }
 .promotion__info b {
@@ -4372,9 +4408,11 @@ button,
     margin-bottom: 25px;
   }
 }
-.promotion__other a {
-  color: #102654;
-  border-bottom: 1px solid #102654;
+.promotion__other a::after {
+  background-color: #102654;
+}
+.promotion__other a:not([disabled]):focus {
+  outline: 1px solid #102654;
 }
 
 /* @mixin hover-focus {
