@@ -17,6 +17,18 @@
     line-height: 1;
     width: 90%;
     margin: 0;
+
+    @media screen and (min-width: 1366px) {
+      br {
+        display: none;
+      }
+    }
+
+    @include vp-1365 {
+      font-size: 22px;
+      width: 80%;
+      // padding: 34px 20px 32px 0;
+    }
   }
 
   p {
@@ -24,6 +36,10 @@
     line-height: 1.33;
     margin: 0;
     padding: 4px 210px 0 0;
+
+    @include vp-1365 {
+      padding: 2px 120px 0 0;
+    }
   }
 
   &:first-child {
