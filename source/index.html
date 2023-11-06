@@ -212,6 +212,7 @@
                   <source media="(min-width: 1366px)" width="321" height="384" srcset="./img/content/subscription/plate-desktop.webp 1x, ./img/content/subscription/plate-desktop@2x.webp 2x" type="image/webp">
                   <img src="./img/content/subscription/plate-desktop.png" width="321" height="384" srcset="./img/content/subscription/plate-desktop@2x.jpg 2x" alt="">
             </picture>
+          </div>
         </section>
 
         <section class="supergames">
@@ -265,16 +266,14 @@
                   </div>
                   <div class="jury__image-container">
                     <picture>
-                      <picture>
-                        <source media="(max-width: 767px)" width="226" height="274" srcset="./img/content/jury/jury-1.webp 1x, ./img/content/jury/jury-1@2x.webp 2x" type="image/webp">
-                        <source media="(max-width: 767px)" width="226" height="274" srcset="./img/content/jury/jury-1.jpg 1x, ./img/content/jury/jury-1@2x.jpg 2x" type="image/jpeg">
-                        <source media="(max-width: 1365px)" width="268" height="294" srcset="./img/content/jury/jury-1.webp 1x, ./img/content/jury/jury-1@2x.webp 2x" type="image/webp">
-                        <source media="(max-width: 1365px)" width="268" height="294" srcset="./img/content/jury/jury-1.jpg 1x, ./img/content/jury/jury-1@2x.jpg 2x" type="image/jpeg">
-                        <source media="(min-width: 1366px)" width="260" height="294" srcset="./img/content/jury/jury-1.webp 1x, ./img/content/jury/jury-1@2x.webp 2x" type="image/webp">
-                        <img src="./img/content/jury/jury-1.jpg" width="260" height="294" srcset="./img/content/jury/jury-1@2x.jpg 2x" loading="lazy" alt="">
-                      </picture>
+                      <source media="(max-width: 767px)" width="226" height="274" srcset="./img/content/jury/jury-1.webp 1x, ./img/content/jury/jury-1@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 767px)" width="226" height="274" srcset="./img/content/jury/jury-1.jpg 1x, ./img/content/jury/jury-1@2x.jpg 2x" type="image/jpeg">
+                      <source media="(max-width: 1365px)" width="268" height="294" srcset="./img/content/jury/jury-1.webp 1x, ./img/content/jury/jury-1@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 1365px)" width="268" height="294" srcset="./img/content/jury/jury-1.jpg 1x, ./img/content/jury/jury-1@2x.jpg 2x" type="image/jpeg">
+                      <source media="(min-width: 1366px)" width="260" height="294" srcset="./img/content/jury/jury-1.webp 1x, ./img/content/jury/jury-1@2x.webp 2x" type="image/webp">
+                      <img src="./img/content/jury/jury-1.jpg" width="260" height="294" srcset="./img/content/jury/jury-1@2x.jpg 2x" loading="lazy" alt="">
                     </picture>
-                    </div>
+                  </div>
                 </li>
 
                 <li class="jury__item swiper-slide">
@@ -546,7 +545,7 @@
         <section class="faq container">
           <h2>Вопросы и ответы</h2>
           <div class="faq__wrapper tabs" data-tabs="parent" data-delay="300">
-            <div class="faq__controls" ata-tabs="controls">
+            <div class="faq__controls" data-tabs="controls">
               <button class="faq__control btn is-active" type="button" data-tabs="control">Центр</button>
               <button class="faq__control btn" type="button" data-tabs="control">Абонемент</button>
               <button class="faq__control btn" type="button" data-tabs="control">Услуги</button>
@@ -559,7 +558,7 @@
                   <button class="accordion__button" type="button" data-accordion="button">
                     <span class="visually-hidden">Открыть или закрыть ответ</span>
                   </button>
-                  <div class="accordion__content" data-accordion="content">
+                  <div data-accordion="content">
                     <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
                   </div>
                 </li>
@@ -591,7 +590,7 @@
                   </div>
                 </li>
               </ul>
-              <ul data-tabs="element" data-accordion="parent">
+              <ul class="accordion" data-tabs="element" data-accordion="parent">
                 <li class="accordion__item" data-accordion="element">
                   <h3>Занятия с тренером входят в абонемент?</h3>
                   <button class="accordion__button" type="button" data-accordion="button">
@@ -629,7 +628,7 @@
                   </div>
                 </li>
               </ul>
-              <ul data-tabs="element" data-accordion="parent">
+              <ul class="accordion" data-tabs="element" data-accordion="parent">
                 <li class="accordion__item" data-accordion="element">
                   <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
                   <button class="accordion__button" type="button" data-accordion="button">
@@ -667,7 +666,7 @@
                   </div>
                 </li>
               </ul>
-              <ul data-tabs="element" data-accordion="parent">
+              <ul class="accordion" data-tabs="element" data-accordion="parent">
                 <li class="accordion__item" data-accordion="element">
                   <h3>Есть в фитнес-центре дресс-код?</h3>
                   <button class="accordion__button" type="button" data-accordion="button">
