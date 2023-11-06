@@ -6,8 +6,14 @@
 
   @include vp-1365 {
     padding-top: 101px;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
     min-height: 824px;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    min-height: 851px;
   }
 
   h2 {
@@ -24,6 +30,12 @@
       text-align: center;
       margin-bottom: 49px;
     }
+
+    @include vp-767 {
+      font-size: 32px;
+      letter-spacing: 0.96px;
+      margin-bottom: 36px;
+    }
   }
 }
 
@@ -37,6 +49,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 39px
+  }
+
+  @include vp-767 {
+    gap: 29px
   }
 }
 
@@ -57,6 +73,10 @@
     margin: 0;
   }
 
+  @include vp-767 {
+    gap: 8px;
+  }
+
   button {
     justify-content: center;
     border: 1px solid $color-sapphire-20;
@@ -73,6 +93,12 @@
       width: calc(162 / 678 * 100%);
     }
 
+    @include vp-767 {
+      font-size: 16px;
+      padding: 14px 19px 12px;
+      width: calc(141 / 290 * 100%);
+    }
+
     &:hover,
     &:focus {
       border-color: $color-sapphire;
@@ -86,6 +112,11 @@
       padding: 18px 48px;
       border: 0;
       outline: 0;
+
+      @include vp-767 {
+        font-size: 16px;
+        padding: 14px 20px 12px;
+      }
     }
 
     &:disabled {
