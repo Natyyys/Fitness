@@ -46,6 +46,7 @@
     grid-template-rows: repeat(2, min-height);
     column-gap: calc(30 / 678 * 100%);
     row-gap: 30px;
+    margin: 0 auto;
   }
 
   @include vp-767 {

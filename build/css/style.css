@@ -4143,6 +4143,7 @@ button,
        -moz-column-gap: 4.4247787611%;
             column-gap: 4.4247787611%;
     row-gap: 30px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 767px) {
