@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="preload" href="fonts/alumnisans-extrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/alumnisans-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/alumnisans-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensed-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto-condensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -760,42 +761,45 @@
 
         <section class="info">
           <div class="info__wrapper">
-            <div class="info__free-lesson">
-              <h2>Бесплатное занятие</h2>
-              <form action="https://echo.htmlacademy.ru/" method="post">
-                <div class="info__form">
-                  <label for="user-name" aria-label="Введите ваше имя."></label>
-                  <input type="text" name="name" id="user-name" placeholder="Имя" autocomplete="off" required>
-                </div>
-                <div class="info__form">
-                  <label for="phone" aria-label="Введите ваш номер телефона."></label>
-                  <input type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="off" required>
-                </div>
-                <button class="btn" type="submit">Отправить</button>
-              </form>
+            <div class="info__container info__container--dark">
+              <div class="info__free-lesson">
+                <h2>Бесплатное занятие</h2>
+                <form action="https://echo.htmlacademy.ru/" method="post">
+                  <div class="info__form">
+                    <label for="user-name" aria-label="Введите ваше имя."></label>
+                    <input type="text" name="name" id="user-name" placeholder="Имя" autocomplete="off" required>
+                  </div>
+                  <div class="info__form">
+                    <label for="phone" aria-label="Введите ваш номер телефона."></label>
+                    <input type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="off" required>
+                  </div>
+                  <button class="btn" type="submit">Отправить</button>
+                </form>
+              </div>
             </div>
-            <div class="info__contacts">
-              <h2>Контакты</h2>
-              <ul>
-                <li>
-                  <p>Адрес:</p>
-                  <span>г. Омск, ул. 60 лет Октября, 7</span>
-                </li>
-                <li>
-                  <p>График работы:</p>
-                  <span>Пн-Вс: с 8:00 до 22:00</span>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <p>Телефон:</p>
-                  <a href="tel:+78005555555">8-800-555-55-55</a>
-                </li>
-                <li>
-                  <p>Email:</p>
-                  <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-                </li>
-              </ul>
+            <div class="info__container">
+              <div class="info__contacts">
+                <h2>Контакты</h2>
+                  <ul>
+                    <li>
+                      <p>Адрес:</p>
+                      <span>г. Омск, ул. 60 лет Октября, 7</span>
+                    </li>
+                    <li>
+                      <p>График работы:</p>
+                      <span>Пн-Вс: с 8:00 до 22:00</span>
+                    </li>
+                    <li>
+                      <p>Телефон:</p>
+                      <a href="tel:+78005555555">8-800-555-55-55</a>
+                    </li>
+                    <li>
+                      <p>Email:</p>
+                      <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>

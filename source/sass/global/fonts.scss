@@ -9,6 +9,15 @@
 
 @font-face {
   font-style: normal;
+  font-weight: 700;
+  font-family: "Alumni Sans Bold";
+
+  font-display: swap;
+  src: url("../fonts/alumnisans-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 800;
   font-family: "Alumni Sans Extra Bold";
 
