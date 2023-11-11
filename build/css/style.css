@@ -5358,11 +5358,11 @@ button,
   }
 }
 
-.footer {
+.footer__wrapper {
   background-color: #030a1a;
 }
 
-.footer__wrapper {
+.footer__wrapper-nav {
   min-height: 105px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5381,12 +5381,12 @@ button,
           align-items: center;
 }
 @media (max-width: 1365px) {
-  .footer__wrapper {
+  .footer__wrapper-nav {
     min-height: 115px;
   }
 }
 @media (max-width: 767px) {
-  .footer__wrapper {
+  .footer__wrapper-nav {
     min-height: 260px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5399,7 +5399,7 @@ button,
     gap: 11px;
   }
 }
-.footer__wrapper ul {
+.footer__wrapper-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
