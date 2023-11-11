@@ -2101,6 +2101,20 @@ button,
   background-size: contain;
 }
 
+.main-header__container {
+  padding-bottom: 120px;
+}
+@media (max-width: 1365px) {
+  .main-header__container {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .main-header__container {
+    padding-bottom: 70px;
+  }
+}
+
 .main-header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2116,6 +2130,10 @@ button,
   cursor: pointer;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  outline: none;
+}
+.main-header__logo:hover, .main-header__logo:focus, .main-header__logo:focus-visible {
+  opacity: 0.5;
 }
 @media (max-width: 767px) {
   .main-header__logo {
@@ -2167,6 +2185,7 @@ button,
   border-bottom: 1px solid transparent;
   margin: 24px 0 23px;
   cursor: pointer;
+  outline: none;
 }
 @media (max-width: 1365px) {
   .main-header__contact {
