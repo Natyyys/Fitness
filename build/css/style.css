@@ -5066,6 +5066,7 @@ button,
   font-size: 14px;
   line-height: 1.57;
   padding-right: 10px;
+  color: #102654;
 }
 @media (max-width: 767px) {
   .info__wrapper span,
@@ -5204,8 +5205,24 @@ button,
 .info__free-lesson input:hover {
   border-bottom: 1px solid #ffffff;
 }
-.info__free-lesson input:focus, .info__free-lesson input:active {
+.info__free-lesson input:focus, .info__free-lesson input:focus-visible, .info__free-lesson input:active {
   border: 1px solid #ffffff;
+  outline: none;
+}
+.info__free-lesson input:focus::-webkit-input-placeholder, .info__free-lesson input:focus-visible::-webkit-input-placeholder, .info__free-lesson input:active::-webkit-input-placeholder {
+  color: transparent;
+}
+.info__free-lesson input:focus::-moz-placeholder, .info__free-lesson input:focus-visible::-moz-placeholder, .info__free-lesson input:active::-moz-placeholder {
+  color: transparent;
+}
+.info__free-lesson input:focus:-ms-input-placeholder, .info__free-lesson input:focus-visible:-ms-input-placeholder, .info__free-lesson input:active:-ms-input-placeholder {
+  color: transparent;
+}
+.info__free-lesson input:focus::-ms-input-placeholder, .info__free-lesson input:focus-visible::-ms-input-placeholder, .info__free-lesson input:active::-ms-input-placeholder {
+  color: transparent;
+}
+.info__free-lesson input:focus::placeholder, .info__free-lesson input:focus-visible::placeholder, .info__free-lesson input:active::placeholder {
+  color: transparent;
 }
 .info__free-lesson input[disabled] {
   opacity: 0.3;
@@ -5356,6 +5373,15 @@ button,
   .info__contacts li {
     row-gap: 13px;
   }
+}
+.info__contacts a:hover, .info__contacts a:focus, .info__contacts a:focus-visible {
+  opacity: 0.5;
+  outline: none;
+}
+.info__contacts a:active {
+  color: #102654;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .footer__wrapper {

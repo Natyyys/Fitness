@@ -47,6 +47,7 @@
     font-size: 14px;
     line-height: 1.57;
     padding-right: 10px;
+    color: $color-sapphire;
 
     @include vp-767 {
       line-height: 1.43;
@@ -157,8 +158,14 @@
     }
 
     &:focus,
+    &:focus-visible,
     &:active {
       border: 1px solid $color-default-white;
+      outline: none;
+
+      &::placeholder {
+        color: transparent;
+      }
     }
 
     &[disabled] {
@@ -275,6 +282,21 @@
 
     @include vp-767 {
       row-gap: 13px;
+    }
+  }
+
+  a {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      opacity: 0.5;
+      outline: none;
+    }
+
+    &:active {
+      color: $color-sapphire;
+      text-decoration: underline;
+      text-underline-offset: 6px;
     }
   }
 }
