@@ -2218,7 +2218,6 @@ button,
   display: flex;
   gap: 70px;
   color: #ffffff;
-  margin-bottom: 120px;
 }
 @media (max-width: 1365px) {
   .hero__wrapper {
@@ -2227,14 +2226,12 @@ button,
     max-width: -moz-max-content;
     max-width: max-content;
     margin: 0 auto;
-    margin-bottom: 100px;
   }
 }
 @media (max-width: 767px) {
   .hero__wrapper {
     display: block;
     max-width: 100%;
-    margin-bottom: 70px;
   }
 }
 
@@ -2440,9 +2437,10 @@ button,
             justify-content: center;
   }
 }
-.hero__button:hover, .hero__button:focus {
+.hero__button:hover, .hero__button:focus, .hero__button:focus-visible {
   background-color: #ffffff;
   color: #103aae;
+  outline: none;
 }
 .hero__button:active {
   background-color: #ffffff;

@@ -2,19 +2,16 @@
   display: flex;
   gap: 70px;
   color: $color-default-white;
-  margin-bottom: 120px;
 
   @include vp-1365 {
     gap: 30px;
     max-width: max-content;
     margin: 0 auto;
-    margin-bottom: 100px;
   }
 
   @include vp-767 {
     display: block;
     max-width: 100%;
-    margin-bottom: 70px;
   }
 }
 
@@ -166,9 +163,11 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
     background-color: $color-default-white;
     color: $color-egyptian-blue;
+    outline: none;
   }
 
   &:active {
