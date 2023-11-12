@@ -3228,6 +3228,7 @@ button,
   display: grid;
   -ms-grid-columns: 500px 660px;
   grid-template-columns: 500px 660px;
+  margin-bottom: 120px;
 }
 @media (max-width: 1365px) {
   .supergames__container {
@@ -3236,6 +3237,7 @@ button,
     -ms-grid-columns: min-content 1fr;
     grid-template-columns: -webkit-min-content 1fr;
     grid-template-columns: min-content 1fr;
+    margin-bottom: 100px;
   }
 }
 @media (max-width: 767px) {
@@ -3252,6 +3254,7 @@ button,
     max-width: fit-content;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 70px;
   }
 }
 
