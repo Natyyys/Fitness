@@ -31,12 +31,14 @@ const initJurySlider = () => {
         768: {
           slidesPerView: 2,
           spaceBetween: 32,
+          initialSlide: 2,
           allowTouchMove: true,
         },
 
         320: {
           slidesPerView: 1,
           spaceBetween: 0,
+          initialSlide: 2,
         },
       },
     });

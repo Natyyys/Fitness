@@ -3477,18 +3477,17 @@ button,
   position: relative;
   max-width: 1160px;
   margin: 0 auto;
-  margin-bottom: 120px;
 }
 @media (max-width: 1365px) {
   .jury__wrapper {
     width: auto;
     height: 100%;
-    margin: 0 100px 100px;
+    margin: 0 55px;
   }
 }
 @media (max-width: 767px) {
   .jury__wrapper {
-    margin: 0 47px 70px;
+    margin: 0 32px;
   }
 }
 
@@ -3588,7 +3587,7 @@ button,
   height: 100%;
   overflow-y: scroll;
   display: none;
-  padding: 45px 20px 50px;
+  padding: 45px 20px 49px;
   color: #ffffff;
   text-align: center;
   background-color: rgba(16, 38, 84, 0.89);

@@ -28,16 +28,15 @@
   position: relative;
   max-width: 1160px;
   margin: 0 auto;
-  margin-bottom: 120px;
 
   @include vp-1365 {
     width: auto;
     height: 100%;
-    margin: 0 100px 100px;
+    margin: 0 55px;
   }
 
   @include vp-767 {
-    margin: 0 47px 70px;
+    margin: 0 32px;
   }
 }
 
@@ -130,7 +129,7 @@
   height: 100%;
   overflow-y: scroll;
   display: none;
-  padding: 45px 20px 50px;
+  padding: 45px 20px 49px;
   color: $color-default-white;
   text-align: center;
   background-color: $color-sapphire-89;
