@@ -3447,6 +3447,10 @@ button,
       flex-wrap: wrap;
 }
 
+.jury {
+  max-width: 1160px;
+  margin: 0 auto;
+}
 .jury h2 {
   font-family: "Alumni Sans Semi Bold", "Arial", sans-serif;
   font-size: 54px;
