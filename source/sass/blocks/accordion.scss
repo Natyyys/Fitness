@@ -10,6 +10,11 @@
   padding: 25px 0 23px;
   align-items: center;
 
+  @include vp-1365 {
+    padding-top: 26px;
+    padding-bottom: 22px;
+  }
+
   @include vp-767 {
     padding: 22px 0 20px;
   }
@@ -30,6 +35,7 @@
 
     @include vp-1365 {
       font-size: 22px;
+      font-weight: 400;
       width: 80%;
     }
 
@@ -58,6 +64,11 @@
   &:first-child {
     padding-top: 24px;
 
+    @include vp-1365 {
+      padding-top: 25px;
+      padding-bottom: 22px;
+    }
+
     @include vp-767 {
       padding-top: 21px;
       padding-bottom: 20px;
@@ -66,12 +77,17 @@
     h3 {
       @include vp-767 {
         padding-right: 20px;
+        font-weight: 400;
       }
     }
   }
 
   &:last-child {
     padding-bottom: 24px;
+
+    @include vp-1365 {
+      padding-bottom: 23px;
+    }
 
     @include vp-767 {
       padding-bottom: 21px;
@@ -84,10 +100,15 @@
   height: 40px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid $color-sapphire;
+  border: 1px solid $color-resolution-blue;
   position: relative;
 
+  @include vp-1365 {
+    transform: translateY(-1px);
+  }
+
   @include vp-767 {
+    transform: translateY(0);
     width: 30px;
     height: 30px;
   }
@@ -97,8 +118,8 @@
     position: absolute;
     content: '';
     width: 20px;
-    height: 2px;
-    background-color: $color-sapphire;
+    height: 1px;
+    background-color: $color-resolution-blue;
     right: 50%;
     top: 18px;
     transform: translateX(50%);
@@ -117,7 +138,7 @@
   &:hover,
   &:focus
   &:focus-visible {
-    background-color: $color-sapphire;
+    background-color: $color-resolution-blue;
     outline: none;
 
     &::before,
@@ -128,7 +149,7 @@
 }
 
 .accordion__item.is-active .accordion__button {
-  background: $color-sapphire;
+  background: $color-resolution-blue;
 
   &::before {
     background: $color-default-white;

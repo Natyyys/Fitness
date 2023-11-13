@@ -32,6 +32,7 @@
       font-size: 32px;
       letter-spacing: 0.96px;
       margin-bottom: 45px;
+      transform: translateX(-1px);
     }
   }
 }
@@ -74,7 +75,7 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      padding: 30px 25px;
+      padding: 30px 25px 29px;
       text-align: center;
       align-items: center;
     }
@@ -94,7 +95,8 @@
 
     @include vp-767 {
       font-size: 18px;
-      line-height: 1.11;
+      font-weight: 400;
+      line-height: 1.14;
       margin-bottom: 17px;
     }
   }
@@ -106,7 +108,7 @@
 
     @include vp-767 {
       font-size: 14px;
-      line-height: 1.57;
+      line-height: calc(22 / 14);
     }
   }
 }
@@ -141,12 +143,8 @@
   border: none;
   z-index: 2;
 
-  @include vp-1365 {
-    top: 47.6%;
-  }
-
   @include vp-767 {
-    top: 51%;
+    top: 50.5%;
     width: 40px;
     height: 40px;
   }
@@ -158,19 +156,17 @@
     bottom: 0;
     left: 0;
     margin: auto;
+    width: 16px;
+    height: 32px;
 
     @include vp-767 {
-      width: 10px;
-      height: 19px;
+      width: 11px;
+      height: 20px;
     }
   }
 
   &--prev {
-    left: -76px;
-
-    @include vp-1365 {
-      left: -69px;
-    }
+    left: -74px;
 
     @include vp-767 {
       left: -44px;
@@ -178,18 +174,15 @@
   }
 
   &--next {
-    right: -76px;
-
-    @include vp-1365 {
-      right: -69px;
-    }
+    right: -74px;
 
     @include vp-767 {
       right: -44px;
     }
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     border: 1px solid $color-sapphire;
     border-radius: 50%;
   }
@@ -202,6 +195,7 @@
 
   &:disabled {
     opacity: 0.3;
+    border: none;
   }
 }
 

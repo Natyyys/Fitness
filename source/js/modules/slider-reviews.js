@@ -18,14 +18,17 @@ const initReviewsSlider = () => {
       breakpoints: {
         1366: {
           allowTouchMove: false,
+          initialSlide: 1,
         },
 
         768: {
           allowTouchMove: true,
+          initialSlide: 1,
         },
 
         320: {
           allowTouchMove: true,
+          initialSlide: 1,
         },
       },
     });
