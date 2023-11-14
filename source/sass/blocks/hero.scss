@@ -1,6 +1,6 @@
 .hero__wrapper {
   display: flex;
-  gap: 70px;
+  gap: 71px;
   color: $color-default-white;
 
   @include vp-1365 {
@@ -19,8 +19,9 @@
   display: grid;
   grid-template-columns: 113px min-content;
   grid-template-rows: max-content max-content;
-  margin: auto 0 auto;
-  row-gap: 51px;
+  margin: auto 0;
+  row-gap: 48px;
+  column-gap: 2px;
 
   @include vp-1365 {
     column-gap: 26px;
@@ -48,15 +49,17 @@
   }
 
   p {
-    font-family: $ff-alumnisans-semibold;
+    font-family: $ff-alumnisans;
+    font-weight: 600;
     font-size: 54px;
     line-height: 1;
     letter-spacing: 1.62px;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 
     @include vp-1365 {
+      letter-spacing: 1.26px;
       font-size: 42px;
     }
 
@@ -68,13 +71,14 @@
   }
 
   h1 {
-    font-family: $ff-alumnisans-extrabold;
+    font-family: $ff-alumnisans;
+    font-weight: 800;
     font-size: 92px;
-    line-height: 1.19;
+    line-height: 1.2;
     letter-spacing: 4.6px;
     text-transform: uppercase;
     margin: 0;
-    padding-left: 23px;
+    padding-left: 20px;
 
     @include vp-1365 {
       font-size: 72px;
@@ -85,7 +89,7 @@
 
     @include vp-767 {
       font-size: 62px;
-      line-height: (70 / 62);
+      line-height: calc(70 / 62);
       letter-spacing: 1.86px;
     }
   }
@@ -98,7 +102,6 @@
   text-align: right;
   margin: 0;
   vertical-align: middle;
-  font-family: $ff-robotocondensed-regular;
   font-size: 14px;
   line-height: 1.5;
   justify-content: center;
@@ -106,12 +109,16 @@
   flex-direction: column;
   grid-column: 1/2;
   grid-row: 1/-1;
+  row-gap: 1px;
+  margin-top: 1px;
 
   @include vp-767 {
     grid-row: 1/2;
     justify-content: end;
-    line-height: (20 / 14);
+    line-height: calc(20 / 14);
+    margin: 0;
     margin-bottom: 2px;
+    row-gap: 0;
   }
 }
 
@@ -133,6 +140,11 @@
     max-height: 100%;
     object-fit: contain;
     object-position: center;
+
+    @include vp-1365 {
+      width: 324px;
+      height: 390px;
+    }
   }
 }
 
@@ -144,6 +156,11 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
+  transform: translateX(1px);
+
+  @include vp-1365 {
+    transform: translateX(0);
+  }
 
   @include vp-767 {
     width: 100%;
@@ -153,6 +170,7 @@
 
 .hero__button {
   min-width: 230px;
+  padding: 26px 54px 24px;
 
   @include vp-1365 {
     min-width: 185px;

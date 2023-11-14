@@ -13,7 +13,8 @@
   }
 
   h2 {
-    font-family: $ff-alumnisans-semibold;
+    font-family: $ff-alumnisans;
+    font-weight: 600;
     font-size: 54px;
     line-height: 1;
     letter-spacing: 1.62px;
@@ -55,7 +56,8 @@
   }
 
   b {
-    font-family: $ff-robotocondensed-bold;
+    font-family: $ff-robotocondensed;
+    font-weight: 700;
     font-size: 26px;
     line-height: 1;
     margin-bottom: 15px;
@@ -70,7 +72,8 @@
   }
 
   strong {
-    font-family: $ff-robotocondensed-bold;
+    font-family: $ff-robotocondensed;
+    font-weight: 700;
     font-size: 70px;
     line-height: 1;
     margin-bottom: 26px;
@@ -88,6 +91,7 @@
   p {
     font-size: 18px;
     line-height: 1.33;
+    font-weight: 300;
     margin: 0;
     margin-bottom: 165px;
 
@@ -103,7 +107,8 @@
   }
 
   a {
-    font-family: $ff-robotocondensed-bold;
+    font-family: $ff-robotocondensed;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1;
     letter-spacing: 0.7px;

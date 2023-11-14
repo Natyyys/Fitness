@@ -17,7 +17,8 @@
   }
 
   h2 {
-    font-family: $ff-alumnisans-semibold;
+    font-family: $ff-alumnisans;
+    font-weight: 600;
     font-size: 54px;
     line-height: 1;
     letter-spacing: 1.62px;
@@ -83,7 +84,8 @@
     color: $color-sapphire;
     background-color: transparent;
     text-transform: capitalize;
-    font-family: $ff-robotocondensed-regular;
+    font-family: $ff-robotocondensed;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1;
     padding: 19px 46px 15px;
