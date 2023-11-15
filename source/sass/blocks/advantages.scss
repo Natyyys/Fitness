@@ -65,62 +65,6 @@
       gap: 0;
     }
   }
-
-  li {
-    strong {
-      font-family: $ff-robotocondensed;
-      font-weight: 700;
-      font-size: 70px;
-      line-height: 1;
-
-      @include vp-767 {
-        font-size: 64px;
-      }
-    }
-
-    small {
-      font-size: 14px;
-      line-height: 1.57;
-
-      @include vp-767 {
-        line-height: 1.42;
-      }
-    }
-
-    p {
-      font-size: 22px;
-      line-height: 1;
-      margin: 0;
-
-      @include vp-1365 {
-        font-size: 20px;
-      }
-
-      @include vp-767 {
-        font-size: 18px;
-        line-height: 1.11;
-        margin-bottom: 12px;
-      }
-    }
-
-    span {
-      font-weight: 300;
-
-      @include vp-767 {
-        display: inline-block;
-        font-size: 14px;
-        line-height: 1.57;
-      }
-    }
-
-    &:first-child {
-      p {
-        @include vp-767 {
-          margin-bottom: 14px;
-        }
-      }
-    }
-  }
 }
 
 .advantages__item {
@@ -145,33 +89,12 @@
     margin-bottom: 35px;
   }
 
-  &:first-child {
-    span {
-      @include vp-767 {
-        padding: 0 40px;
-        margin-top: -2px;
-      }
-    }
-  }
-
-  &:first-child .advantages__item-title strong {
-    background: $text-gradient-128;
-    background-clip: text;
-    color: transparent;
-  }
-
-  &:last-child .advantages__item-title strong {
-    background: $text-gradient-143;
-    background-clip: text;
-    color: transparent;
-  }
-
-  &:first-child,
-  &:nth-child(2) {
+  &:nth-child(2n+4),
+  &:nth-child(2n+5) {
     &::after {
       content: "";
       position: absolute;
-      bottom: -83px;
+      top: -69px;
       left: 0;
       width: 100%;
       height: 2px;
@@ -180,6 +103,17 @@
       @include vp-1365 {
         display: none;
       }
+    }
+  }
+
+  strong {
+    font-family: $ff-robotocondensed;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 1;
+
+    @include vp-767 {
+      font-size: 64px;
     }
   }
 
@@ -249,6 +183,8 @@
     }
 
     span {
+      font-weight: 400;
+
       @media screen and (min-width: 1365px) {
         br {
           display: none;
@@ -259,9 +195,74 @@
         font-family: $ff-robotocondensed;
         font-weight: 300;
         font-size: 14px;
-        line-height: 1.57;
+        line-height: 22px;
       }
     }
+  }
+
+  &:not(.advantages__item--dark) {
+    small {
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-persian-blue;
+
+      @include vp-767 {
+        line-height: 20px;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1;
+      margin: 0;
+
+      @include vp-1365 {
+        font-size: 20px;
+      }
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+    span {
+      font-weight: 300;
+
+      @include vp-767 {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &:first-child {
+    span {
+      @include vp-767 {
+        padding: 0 40px;
+        margin-top: -2px;
+      }
+    }
+
+    p {
+      @include vp-767 {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &:first-child .advantages__item-title strong {
+    background: $text-gradient-128;
+    background-clip: text;
+    color: $color-sapphire;
+  }
+
+  &:last-child .advantages__item-title strong {
+    background: $text-gradient-143;
+    background-clip: text;
+    color: transparent;
   }
 }
 

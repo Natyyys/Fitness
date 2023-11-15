@@ -111,13 +111,13 @@
     font-family: $ff-robotocondensed;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.57;
+    line-height: 22px;
     color: $color-default-white;
     padding: 5px 10px;
 
-    @include vp-767 {
-      line-height: 1.43;
-    }
+    // @include vp-767 {
+    //   line-height: 20px;
+    // }
 
     &:hover {
       text-decoration: underline;
