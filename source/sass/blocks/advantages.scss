@@ -255,14 +255,16 @@
 
   &:first-child .advantages__item-title strong {
     background: $text-gradient-128;
+    background-color: $color-sapphire;
     background-clip: text;
-    color: $color-sapphire;
+    -webkit-text-fill-color: transparent;
   }
 
   &:last-child .advantages__item-title strong {
     background: $text-gradient-143;
+    background-color: $color-sapphire;
     background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -278,8 +280,9 @@
 
   strong {
     background: $text-gradient-142;
+    background-color: $color-sapphire;
     background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 }
 
