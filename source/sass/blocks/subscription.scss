@@ -161,6 +161,12 @@
       border: 7px solid;
       border-image:  $border-gradient 1;
 
+      p {
+        @include vp-1365 {
+          color: $color-chambray;
+        }
+      }
+
       a {
         color: $color-default-white;
         background: $button-gradient;

@@ -1,16 +1,18 @@
-const initJurySlider = () => {
-  const jurySlider = document.querySelector('[data-jury-slider]');
-  const buttonNext = document.querySelector('[data-jury-next]');
-  const buttonPrev = document.querySelector('[data-jury-prev]');
+import Swiper from '../vendor/swiper';
 
-  return new window.Swiper(jurySlider, {
+const jurySlider = document.querySelector('[data-jury-slider]');
+const buttonNext = document.querySelector('[data-jury-next]');
+const buttonPrev = document.querySelector('[data-jury-prev]');
+
+const initJurySlider = () => {
+
+  return new Swiper(jurySlider, {
     navigation: {
       nextEl: buttonNext,
       prevEl: buttonPrev,
     },
 
     loop: true,
-    autoHeight: false,
     breakpoints: {
       1366: {
         slidesPerView: 4,
@@ -40,4 +42,10 @@ const initJurySlider = () => {
   });
 };
 
-export {initJurySlider};
+const setInitJurySlider = () => {
+  if (jurySlider) {
+    initJurySlider();
+  }
+};
+
+export {setInitJurySlider};

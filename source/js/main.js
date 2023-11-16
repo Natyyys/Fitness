@@ -1,8 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {initJurySlider} from './modules/slider-jury';
-import {initReviewsSlider} from './modules/slider-reviews';
+import {setInitJurySlider} from './modules/slider-jury';
+import {setInitReviewsSlider} from './modules/slider-reviews';
 import {initVideo} from './modules/video-player';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initAccordions} from './modules/accordion/init-accordion';
@@ -20,8 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   initVideo();
-  initJurySlider();
-  initReviewsSlider();
+  setInitJurySlider();
+  setInitReviewsSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
