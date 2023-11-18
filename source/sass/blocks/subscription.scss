@@ -296,9 +296,7 @@
         padding: 21px 20px 19px 20px;
       }
 
-      &:hover,
-      &:focus,
-      &:focus-visible {
+      @include hover-focus {
         color: $color-default-white;
         background: $button-gradient;
         padding: 27px;
@@ -314,7 +312,11 @@
         color: $color-white-70;
         background: $button-gradient;
         border: none;
-        outline: none;;
+        outline: none;
+
+        @include vp-1365 {
+          padding: 22px;
+        }
       }
 
       &--disabled {

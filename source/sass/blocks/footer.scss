@@ -55,12 +55,13 @@
       padding: 28px 20px 10px 1px;
     }
 
-    &:hover,
-    &:focus,
-    &:focus-visible,
-    &:active {
+    @include hover-focus {
       opacity: 0.5;
       outline: none;
+    }
+
+    @include active {
+      opacity: 0.5;
     }
 
     &:disabled {
@@ -115,11 +116,7 @@
     color: $color-default-white;
     padding: 5px 10px;
 
-    // @include vp-767 {
-    //   line-height: 20px;
-    // }
-
-    &:hover {
+    @include hover {
       text-decoration: underline;
       text-underline-offset: 8px;
     }
@@ -166,9 +163,7 @@
     border-radius: 50%;
     background-color: $color-default-white;
 
-    &:hover,
-    &:focus,
-    &:focus-visible {
+    @include hover-focus {
       background-color: $color-egyptian-blue;
       outline: none;
       color: $color-default-white;
@@ -186,7 +181,199 @@
     }
   }
 
-  svg {
+  svg {.footer__wrapper {
+    background-color: $color-black-russian;
+  }
+
+  .footer__wrapper-nav {
+    min-height: 105px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-1365 {
+      min-height: 115px;
+    }
+
+    @include vp-767 {
+      min-height: 260px;
+      flex-direction: column;
+      padding-bottom: 45px;
+      justify-content: start;
+      gap: 11px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+  }
+
+  .footer__logo {
+    margin-right: 247px;
+
+    @include vp-1365 {
+      margin: 0;
+    }
+
+    @include vp-767 {
+      margin-right: auto;
+    }
+
+    a {
+      display: block;
+      padding: 36px 0 30px 1px;
+      align-self: center;
+
+
+      @include vp-1365 {
+        padding-top: 37px;
+      }
+
+      @include vp-767 {
+        padding: 28px 20px 10px 1px;
+      }
+
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:active {
+        opacity: 0.5;
+        outline: none;
+      }
+
+      &:disabled {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: default;
+      }
+
+      svg {
+        @include vp-1365 {
+          width: 97px;
+          height: 22px;
+        }
+
+        @include vp-767 {
+          width: 88px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .footer__menu {
+    padding: 0;
+    max-width: calc(456 / 1160 * 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 0;
+    list-style: none;
+    gap: 15px 21px;
+
+    @include vp-1365 {
+      max-width: calc(411 / 678 * 100%);
+      margin: 0 0 0 -4px;
+      gap: 10px;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+      margin: 0;
+      margin-left: -20px;
+      gap: 16px;
+      margin-bottom: 42px;
+    }
+
+    a {
+      font-family: $ff-robotocondensed;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-default-white;
+      padding: 5px 10px;
+
+      // @include vp-767 {
+      //   line-height: 20px;
+      // }
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 8px;
+      }
+
+      &:focus-visible {
+        outline: 1px solid $color-default-white;
+      }
+
+      &[disabled] {
+        opacity: 0.4;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+
+  .footer__social {
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    max-width: 15%;
+    margin-left: auto;
+    justify-content: flex-end;
+
+    @include vp-1365 {
+      margin: 0;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+    }
+
+    li {
+      align-self: center;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $color-default-white;
+
+      @include hover-focus {
+        background-color: $color-egyptian-blue;
+        outline: none;
+        color: $color-default-white;
+      }
+
+      &:active {
+        background-color: $color-sapphire;
+        color: $color-default-white;
+      }
+
+      &[disabled] {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
     position: absolute;
     top: 50%;
     left: 50%;

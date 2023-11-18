@@ -149,9 +149,7 @@
       padding: 20px 30px;
     }
 
-    &:hover,
-    &:focus,
-    &:focus-visible {
+    @include hover-focus {
       background-color: $color-default-white;
       color: $color-egyptian-blue;
       outline: none;

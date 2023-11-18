@@ -184,11 +184,9 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    }
+  }
 
-  &:hover,
-  &:focus,
-  &:focus-visible {
+  @include hover-focus {
     background-color: $color-default-white;
     color: $color-egyptian-blue;
     outline: none;
