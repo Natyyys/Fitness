@@ -116,7 +116,7 @@
 }
 
 
-.reviews__image {
+.reviews__image-container {
   grid-row: 1 / -1;
 
   @include vp-767 {
@@ -125,7 +125,6 @@
   }
 
   img {
-    background-color: $color-spindle;
     border-radius: 50%;
 
     @include vp-767 {
@@ -201,11 +200,9 @@
   }
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus {
     border: 1px solid $color-sapphire;
     border-radius: 50%;
-    outline: none;
   }
 
   &:active {

@@ -125,7 +125,6 @@
 .hero__image {
   max-width: 500px;
   max-height: 524px;
-  background-color: $color-spindle;
 
   @include vp-1365 {
     max-width: 324px;
