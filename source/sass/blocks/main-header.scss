@@ -32,7 +32,9 @@
     margin: 0;
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     opacity: 0.5;
   }
 
@@ -83,7 +85,9 @@
     margin: 0;
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     color: $color-resolution-blue;
   }
 

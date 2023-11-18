@@ -89,7 +89,9 @@
   padding: 0;
   cursor: pointer;
 
-  @include hover-focus {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     outline: none;
 
     span {

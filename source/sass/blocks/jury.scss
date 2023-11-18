@@ -272,7 +272,9 @@
     }
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     border: 1px solid $color-sapphire;
     border-radius: 50%;
     outline: none;

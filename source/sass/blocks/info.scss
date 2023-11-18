@@ -142,7 +142,7 @@
       color: $color-default-white;
     }
 
-    @include hover {
+    &:hover {
       border-bottom: 1px solid $color-default-white;
     }
 

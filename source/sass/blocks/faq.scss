@@ -104,7 +104,9 @@
       align-self: flex-end;
     }
 
-    @include hover-focus {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       border-color: $color-sapphire;
       opacity: 1;
       outline: none;
