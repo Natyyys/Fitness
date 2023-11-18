@@ -105,9 +105,11 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-visible {
       border-color: $color-sapphire;
       opacity: 1;
+      outline: none;
     }
 
     &:active,

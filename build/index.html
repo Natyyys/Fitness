@@ -42,7 +42,7 @@
                 <li>Кардио-зона</li>
               </ul>
               <div class="hero__button-container">
-                <a class="hero__button btn" href="#">Купить абонемент</a>
+                <a class="hero__button btn" href="#subscription">Купить абонемент</a>
               </div>
             </div>
             <div class="hero__image">
@@ -87,6 +87,7 @@
                 <img src="./img/content/gym/poster-desktop.jpg" width="364" height="228" srcset="./img/content/gym/poster-desktop@2x.jpg 2x" alt="" data-video-poster>
               </picture>
               <button class="gym__video-button" type="button" aria-label="Воспроизвести видео." data-video-button>
+                <span class="visually-hidden">Запустить видео.</span>
                 <svg role="img" focusable="false" width="13" height="15">
                   <use href="img/sprite.svg#video-play"></use>
                 </svg>
@@ -244,7 +245,7 @@
             </picture>
           </div>
         </div>
-        <div class="jury">
+        <div class="jury" id="coaches">
           <h2>Жюри</h2>
           <div class="jury__wrapper">
             <div class="jury__slider swiper" data-jury-slider>
@@ -260,7 +261,7 @@
                       <li>Опыт — 6 лет</li>
                     </ul>
                   </div>
-                  <div class="jury__image-container">
+                  <div class="jury__image">
                     <picture>
                       <source media="(max-width: 767px)" width="226" height="274" srcset="./img/content/jury/jury-1.webp 1x, ./img/content/jury/jury-1@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 767px)" width="226" height="274" srcset="./img/content/jury/jury-1.jpg 1x, ./img/content/jury/jury-1@2x.jpg 2x" type="image/jpeg">
@@ -434,12 +435,14 @@
                 </li>
               </ol>
             </div>
-            <button class="jury__button jury__button--prev swiper-button-prev" type="button" aria-label="Назад." data-jury-prev>
+            <button class="jury__button jury__button--prev swiper-button-prev" type="button" data-jury-prev>
+              <span class="visually-hidden">Назад.</span>
               <svg aria-hidden="true" focusable="false" width="18" height="34" aria-label="Стрелка назад.">
                 <use href="img/sprite.svg#arrow-slider"></use>
               </svg>
             </button>
-            <button class="jury__button jury__button--next swiper-button-next" type="button" aria-label="Вперед." data-jury-next>
+            <button class="jury__button jury__button--next swiper-button-next" type="button" data-jury-next>
+              <span class="visually-hidden">Вперед.</span>
               <svg aria-hidden="true" focusable="false" width="18" height="34" aria-label="Стрелка вперед.">
                 <use href="img/sprite.svg#arrow-slider"></use>
               </svg>
@@ -501,7 +504,7 @@
         </div>
       </section>
 
-      <section class="promotion container" data-test="offers">
+      <section class="promotion container" id="promotion" data-test="offers">
         <h2>Акции</h2>
         <div class="promotion__wrapper">
           <div class="promotion__basic">
@@ -715,7 +718,7 @@
               <li class="swiper-slide">
                 <h3>Анна Орлова</h3>
                 <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
-                <div class="reviews__image-container">
+                <div class="reviews__image">
                   <picture>
                     <source srcset="./img/content/reviews/reviews.webp 1x, ./img/content/reviews/reviews@2x.webp 2x" type="image/webp">
                     <img src="./img/content/reviews/reviews.jpg" width="80" height="80" srcset="./img/content/reviews/reviews@2x.jpg 2x" alt="">
@@ -725,7 +728,7 @@
               <li class="swiper-slide">
                 <h3>Анна Орлова</h3>
                 <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
-                <div class="reviews__image-container">
+                <div class="reviews__image">
                   <picture>
                     <source srcset="./img/content/reviews/reviews.webp 1x, ./img/content/reviews/reviews@2x.webp 2x" type="image/webp">
                     <img src="./img/content/reviews/reviews.jpg" width="80" height="80" srcset="./img/content/reviews/reviews@2x.jpg 2x" loading="lazy" alt="">
@@ -735,7 +738,7 @@
               <li class="swiper-slide">
                 <h3>Анна Орлова</h3>
                 <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
-                <div class="reviews__image-container">
+                <div class="reviews__image">
                   <picture>
                     <source srcset="./img/content/reviews/reviews.webp 1x, ./img/content/reviews/reviews@2x.webp 2x" type="image/webp">
                     <img src="./img/content/reviews/reviews.jpg" width="80" height="80" srcset="./img/content/reviews/reviews@2x.jpg 2x" loading="lazy" alt="">
@@ -744,12 +747,14 @@
               </li>
             </ol>
           </div>
-          <button class="reviews__button swiper-button-prev reviews__button--prev" type="button" aria-label="Назад." data-reviews-prev>
+          <button class="reviews__button swiper-button-prev reviews__button--prev" type="button" data-reviews-prev>
+            <span class="visually-hidden">Назад.</span>
             <svg aria-hidden="true" focusable="false" width="18" height="34" aria-label="Стрелка назад.">
               <use href="img/sprite.svg#arrow-slider"></use>
             </svg>
           </button>
-          <button class="reviews__button swiper-button-next reviews__button--next" type="button" aria-label="Вперед." data-reviews-next>
+          <button class="reviews__button swiper-button-next reviews__button--next" type="button" data-reviews-next>
+            <span class="visually-hidden">Вперед.</span>
             <svg aria-hidden="true" focusable="false" width="18" height="34" aria-label="Стрелка вперед.">
               <use href="img/sprite.svg#arrow-slider"></use>
             </svg>
@@ -817,13 +822,13 @@
               <a href="#">Услуги</a>
             </li>
             <li>
-              <a href="#">Абонементы</a>
+              <a href="#subscription">Абонементы</a>
             </li>
             <li>
-              <a href="#">Акции</a>
+              <a href="#promotion">Акции</a>
             </li>
             <li>
-              <a href="#">Тренеры</a>
+              <a href="#coaches">Тренеры</a>
             </li>
             <li>
               <a href="#">Расписание</a>

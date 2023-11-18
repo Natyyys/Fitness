@@ -74,17 +74,18 @@
   background-color: transparent;
   border-bottom: 2px solid transparent;
   padding: 0;
-  padding-bottom: 9px;
+  padding-bottom: 11px;
+  margin-bottom: -2px;
   cursor: pointer;
 
   @include vp-1365 {
     font-size: 18px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
   }
 
   @include vp-767 {
     font-size: 16px;
-    padding-bottom: 13px;
+    padding-bottom: 15px;
   }
 
   &.is-active {
