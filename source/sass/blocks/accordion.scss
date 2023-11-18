@@ -19,31 +19,6 @@
     padding: 22px 0 20px;
   }
 
-  h3 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1;
-    width: 90%;
-    margin: 0;
-
-    @media screen and (min-width: 1366px) {
-      br {
-        display: none;
-      }
-    }
-
-    @include vp-1365 {
-      font-size: 22px;
-      font-weight: 400;
-      width: 80%;
-    }
-
-    @include vp-767 {
-      font-size: 20px;
-    }
-  }
-
   p {
     font-size: 18px;
     line-height: 24px;
@@ -75,10 +50,16 @@
       padding-bottom: 20px;
     }
 
-    h3 {
+    p {
       @include vp-767 {
-        padding-right: 20px;
-        font-weight: 400;
+        padding-right: 12px;
+        font-weight: 300;
+      }
+    }
+
+    b {
+      @include vp-767 {
+        width: 70%;
       }
     }
   }
@@ -97,67 +78,131 @@
 }
 
 .accordion__button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+  border: none;
   background-color: transparent;
-  border: 1px solid $color-resolution-blue;
-  position: relative;
+  padding: 0;
   cursor: pointer;
 
-  @include vp-1365 {
-    transform: translateY(-1px);
-  }
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
 
-  @include vp-767 {
-    transform: translateY(0);
-    width: 30px;
-    height: 30px;
-  }
+    span {
+      background-color: $color-resolution-blue;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    width: 20px;
-    height: 1px;
-    background-color: $color-resolution-blue;
-    right: 50%;
-    top: 18px;
-    transform: translateX(50%);
-
-    @include vp-767 {
-      width: 14px;
-      top: 50%;
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
     }
   }
 
-  &::after {
-    right: 25%;
-    transform: rotate(90deg);
+  b {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    color: $color-sapphire;
+    width: 90%;
+    margin: 0;
+
+    @media screen and (min-width: 1366px) {
+      br {
+        display: none;
+      }
+    }
+
+    @include vp-1365 {
+      font-size: 22px;
+      font-weight: 400;
+      width: 80%;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+    }
+  }
+
+  span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid $color-resolution-blue;
+    position: relative;
+    cursor: pointer;
+
+    @include vp-1365 {
+      transform: translateY(-1px);
+    }
+
+    @include vp-767 {
+      transform: translateY(0);
+      width: 30px;
+      height: 30px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 1px;
+      background-color: $color-resolution-blue;
+      right: 50%;
+      top: 18px;
+      transform: translateX(50%);
+
+      @include vp-767 {
+        width: 14px;
+        top: 50%;
+      }
+    }
+
+    &::after {
+      right: 25%;
+      transform: rotate(90deg);
+    }
   }
 }
 
 .accordion__item.is-active .accordion__button {
-  background: $color-resolution-blue;
+  span {
+    background: $color-resolution-blue;
 
-  &::before {
-    background: $color-default-white;
-  }
+    &::before {
+      background: $color-default-white;
+    }
 
-  &::after {
-    display: none;
+    &::after {
+      display: none;
+    }
   }
 }
 
-.accordion__button:hover,
-.accordion__button:focus,
-.accordion__button:focus-visible {
-  background-color: $color-resolution-blue;
-  outline: none;
+.accordion__content {
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    margin: 0;
+    padding: 4px 210px 0 0;
 
-  &::before,
-  &::after {
-    background-color: $color-default-white;
+    @include vp-1365 {
+      padding: 2px 120px 0 0;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 1.25;
+      padding: 20px 15px 0 0;
+    }
   }
 }
