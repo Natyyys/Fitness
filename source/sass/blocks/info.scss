@@ -80,7 +80,7 @@
   }
 
   h2 {
-    margin-bottom: 32px;
+    margin-bottom: 22px;
 
     @include vp-1365 {
       margin-bottom: 18px;
@@ -97,7 +97,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 30px;
-    row-gap: 25px;
+    row-gap: 35px;
 
     @include vp-1365 {
       row-gap: 25px;

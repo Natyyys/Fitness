@@ -145,6 +145,10 @@
   border: none;
   z-index: 2;
 
+  @include vp-1365 {
+    top: 47.5%;
+  }
+
   @include vp-767 {
     top: 50.5%;
     width: 40px;
@@ -170,6 +174,10 @@
   &--prev {
     left: -74px;
 
+    @include vp-1365 {
+      left: -70px;
+    }
+
     @include vp-767 {
       left: -44px;
     }
@@ -178,8 +186,16 @@
   &--next {
     right: -74px;
 
+    @include vp-1365 {
+      right: -68px;
+    }
+
     @include vp-767 {
-      right: -44px;
+      right: -42px;
+    }
+
+    svg {
+      transform: translateX(-13%);
     }
   }
 
@@ -202,7 +218,7 @@
 }
 
 .reviews__button--next svg {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateX(-13%);
 }
 
 .reviews__button::after {

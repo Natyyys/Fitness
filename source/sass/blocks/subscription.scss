@@ -161,12 +161,6 @@
       border: 7px solid;
       border-image:  $border-gradient 1;
 
-      p {
-        @include vp-1365 {
-          color: $color-chambray;
-        }
-      }
-
       a {
         color: $color-default-white;
         background: $button-gradient;
@@ -176,6 +170,12 @@
 
         @include vp-1365 {
           padding: 22px;
+        }
+      }
+
+      p {
+        @include vp-1365 {
+          color: $color-chambray;
         }
       }
     }
@@ -236,10 +236,10 @@
 
       @include vp-767 {
         font-size: 48px;
-        padding-top: 47px;
+        padding-top: 46px;
         padding-bottom: 4px;
         width: fit-content;
-        gap: 10px;
+        gap: 11px;
       }
 
       svg {
@@ -292,7 +292,7 @@
       @include vp-767 {
         font-family: $ff-robotocondensed;
         font-weight: 700;
-        padding: 20px;
+        padding: 21px 20px 19px 20px;
       }
 
       &:hover,
