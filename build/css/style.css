@@ -2391,6 +2391,7 @@ button,
 .hero__image {
   max-width: 500px;
   max-height: 524px;
+  background-color: #b6bdcc;
 }
 @media (max-width: 1365px) {
   .hero__image {
@@ -2632,6 +2633,7 @@ button,
 .gym__image {
   height: 401px;
   margin: 0 auto;
+  background-color: #b6bdcc;
 }
 @media (max-width: 1365px) {
   .gym__image {
@@ -2652,7 +2654,6 @@ button,
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  background-color: #f8f9fc;
 }
 @media (max-width: 1365px) {
   .gym__image img {
@@ -2675,6 +2676,7 @@ button,
   height: 228px;
   top: 288px;
   left: -63px;
+  background-color: rgba(20, 54, 122, 0.5);
 }
 @media (max-width: 1365px) {
   .gym__video {
@@ -2703,7 +2705,6 @@ button,
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  background-color: rgba(20, 54, 122, 0.5);
 }
 @media (max-width: 1365px) {
   .gym__video img {
@@ -3531,6 +3532,9 @@ button,
       flex-wrap: wrap;
 }
 
+.supergames__image {
+  background-color: #b6bdcc;
+}
 .supergames__image img {
   width: 100%;
   -o-object-fit: cover;
@@ -3868,6 +3872,10 @@ button,
 
 .jury__button::after {
   content: none;
+}
+
+.jury__image {
+  background-color: #b6bdcc;
 }
 
 .advantages {
@@ -4588,6 +4596,10 @@ button,
   outline: 1px solid #102654;
 }
 
+.promotion__image {
+  background-color: #b6bdcc;
+}
+
 .faq {
   padding-top: 120px;
   padding-bottom: 30px;
@@ -4728,9 +4740,10 @@ button,
         align-self: flex-end;
   }
 }
-.faq__controls button:hover, .faq__controls button:focus {
+.faq__controls button:hover, .faq__controls button:focus, .faq__controls button:focus-visible {
   border-color: #102654;
   opacity: 1;
+  outline: none;
 }
 .faq__controls button:active, .faq__controls button.is-active {
   color: #ffffff;
@@ -4927,13 +4940,6 @@ button,
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.accordion__button:hover, .accordion__button:focus .accordion__button:focus-visible {
-  background-color: #1c3374;
-  outline: none;
-}
-.accordion__button:hover::before, .accordion__button:hover::after, .accordion__button:focus .accordion__button:focus-visible::before, .accordion__button:focus .accordion__button:focus-visible::after {
-  background-color: #ffffff;
-}
 
 .accordion__item.is-active .accordion__button {
   background: #1c3374;
@@ -4943,6 +4949,20 @@ button,
 }
 .accordion__item.is-active .accordion__button::after {
   display: none;
+}
+
+.accordion__button:hover,
+.accordion__button:focus,
+.accordion__button:focus-visible {
+  background-color: #1c3374;
+  outline: none;
+}
+.accordion__button:hover::before, .accordion__button:hover::after,
+.accordion__button:focus::before,
+.accordion__button:focus::after,
+.accordion__button:focus-visible::before,
+.accordion__button:focus-visible::after {
+  background-color: #ffffff;
 }
 
 .reviews {
@@ -5088,22 +5108,23 @@ button,
   }
 }
 
-.reviews__image-container {
+.reviews__image {
   grid-row: 1/-1;
 }
 @media (max-width: 767px) {
-  .reviews__image-container {
+  .reviews__image {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
     margin-bottom: 10px;
   }
 }
-.reviews__image-container img {
+.reviews__image img {
+  background-color: #b6bdcc;
   border-radius: 50%;
 }
 @media (max-width: 767px) {
-  .reviews__image-container img {
+  .reviews__image img {
     width: 68px;
     height: 68px;
   }
@@ -5179,9 +5200,10 @@ button,
       -ms-transform: translateX(-13%);
           transform: translateX(-13%);
 }
-.reviews__button:hover, .reviews__button:focus {
+.reviews__button:hover, .reviews__button:focus, .reviews__button:focus-visible {
   border: 1px solid #102654;
   border-radius: 50%;
+  outline: none;
 }
 .reviews__button:active {
   color: #ffffff;
@@ -5439,9 +5461,10 @@ button,
     margin-top: 19px;
   }
 }
-.info__free-lesson button:hover, .info__free-lesson button:focus {
+.info__free-lesson button:hover, .info__free-lesson button:focus, .info__free-lesson button:focus-visible {
   background-color: #ffffff;
   color: #103aae;
+  outline: none;
 }
 .info__free-lesson button:active {
   background-color: #ffffff;

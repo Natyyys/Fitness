@@ -136,18 +136,6 @@
     right: 25%;
     transform: rotate(90deg);
   }
-
-  &:hover,
-  &:focus
-  &:focus-visible {
-    background-color: $color-resolution-blue;
-    outline: none;
-
-    &::before,
-    &::after {
-      background-color: $color-default-white;
-    }
-  }
 }
 
 .accordion__item.is-active .accordion__button {
@@ -159,5 +147,17 @@
 
   &::after {
     display: none;
+  }
+}
+
+.accordion__button:hover,
+.accordion__button:focus,
+.accordion__button:focus-visible {
+  background-color: $color-resolution-blue;
+  outline: none;
+
+  &::before,
+  &::after {
+    background-color: $color-default-white;
   }
 }
