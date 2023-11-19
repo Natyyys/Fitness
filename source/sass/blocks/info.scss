@@ -222,7 +222,7 @@
   padding: 60px 103px 60px 120px;
 
   @include vp-1365 {
-    padding: 105px 133px 99px;
+    padding: 106px 133px 99px;
     margin: 0 auto;
     max-width: 768px;
   }
@@ -239,7 +239,6 @@
     @include vp-1365 {
       font-family: $ff-alumnisans;
       font-weight: 700;
-      margin-bottom: 41px;
     }
 
     @include vp-767 {
@@ -247,40 +246,46 @@
       margin-bottom: 37px;
     }
   }
+}
 
-  ul {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(2, min-content);
-    grid-auto-flow: column;
-    row-gap: 14px;
-    column-gap: 60px;
-    position: relative;
+.info__contacts-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 110px;
+  row-gap: 15px;
+  position: relative;
+
+  @include vp-1365 {
+    column-gap: 131px;
+    row-gap: 27px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: $color-light-slate-grey;
+    left: 47.8%;
 
     @include vp-1365 {
-      row-gap: 27px;
+      left: 50%;
     }
 
     @include vp-767 {
-      display: flex;
-      flex-direction: column;
+      display: none;
     }
+  }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 1px;
-      height: 100%;
-      background-color: $color-light-slate-grey;
-      left: 47.8%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: max-content;
 
-      @include vp-1365 {
-        left: 50%;
-      }
-
-      @include vp-767 {
-        display: none;
-      }
+    @include vp-1365 {
+      row-gap: 27px;
     }
   }
 
