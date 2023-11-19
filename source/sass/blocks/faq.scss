@@ -103,40 +103,41 @@
       width: calc(141 / 290 * 100%);
       align-self: flex-end;
     }
+  }
+}
 
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      border-color: $color-sapphire;
-      opacity: 1;
-      outline: none;
+.faq__control {
+  @include hover-focus {
+    border-color: $color-sapphire;
+    opacity: 1;
+    outline: none;
+  }
+
+  &:active,
+  &.is-active {
+    color: $color-default-white;
+    background: $button-gradient;
+    padding: 18px 48px;
+    letter-spacing: normal;
+    line-height: 1;
+    border: 0;
+    outline: 0;
+
+    @include vp-1365 {
+      padding: 21px 48px 15px;
     }
 
-    &:active,
-    &.is-active {
-      color: $color-default-white;
-      background: $button-gradient;
-      padding: 18px 48px;
-      letter-spacing: normal;
-      line-height: 1;
-      border: 0;
-      outline: 0;
-
-      @include vp-1365 {
-        padding: 21px 48px 15px;
-      }
-
-      @include vp-767 {
-        font-size: 16px;
-        padding: 16px 20px 12px;
-      }
+    @include vp-767 {
+      font-size: 16px;
+      padding: 16px 20px 12px;
     }
+  }
 
-    &:disabled {
-      opacity: 0.2;
-      pointer-events: none;
-      cursor: default;
-    }
+  &:disabled,
+  &--disabled {
+    opacity: 0.2;
+    pointer-events: none;
+    cursor: default;
   }
 }
 

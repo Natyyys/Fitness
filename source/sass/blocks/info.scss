@@ -210,13 +210,10 @@
 
 .info__form {
   position: relative;
+}
 
-  &.is-invalid {
-    input {
-      outline: none;
-      border-bottom: 1px solid $color-torch-red-error;
-    }
-  }
+.info__form.is-invalid input {
+  border-bottom: 1px solid $color-torch-red-error;
 }
 
 .info__contacts {

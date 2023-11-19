@@ -88,19 +88,24 @@
     padding-bottom: 15px;
   }
 
+  @include hover-focus {
+    color: $color-sapphire;
+    border-bottom: 2px solid $color-crimson;
+    margin-bottom: -2px;
+    outline: none;
+  }
+
+  &:active,
   &.is-active {
     color: $color-sapphire;
     border-bottom: 2px solid $color-crimson;
     margin-bottom: -2px;
   }
 
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    color: $color-sapphire;
-    border-bottom: 2px solid $color-crimson;
-    margin-bottom: -2px;
-    outline: none;
+  &:disabled,
+  &--disabled {
+    opacity: 0.3;
+    border: none;
   }
 }
 
@@ -143,7 +148,6 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 7px solid $color-default-white;
     z-index: 2;
 
     @include vp-1365 {
@@ -155,29 +159,6 @@
     @include vp-767 {
       width: 290px;
       padding: 45px 35px 43px;
-    }
-
-    &.is-active {
-      border: 7px solid;
-      border-image: $border-gradient 1;
-
-      a {
-        color: $color-default-white;
-        background: $button-gradient;
-        border: none;
-        outline: none;
-        padding: 27px;
-
-        @include vp-1365 {
-          padding: 22px;
-        }
-      }
-
-      p {
-        @include vp-1365 {
-          color: $color-chambray;
-        }
-      }
     }
 
     h3 {
@@ -241,47 +222,23 @@
         width: fit-content;
         gap: 11px;
       }
+    }
 
-      svg {
-        @include vp-1365 {
-          align-self: center;
-        }
-
-        @include vp-767 {
-          width: 24px;
-          height: 33px;
-        }
+    svg {
+      @include vp-1365 {
+        align-self: center;
       }
 
-
-      &::before {
-        position: absolute;
-        top: 12px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 100px;
-        color: $color-whisper-48;
-        z-index: -1;
-        content: attr(data-parent);
-
-        @include vp-1365 {
-          top: 0;
-        }
-
-        @include vp-767 {
-          font-size: 80px;
-        }
+      @include vp-767 {
+        width: 24px;
+        height: 33px;
       }
     }
 
     a {
-      color: $color-sapphire;
-      border-color: $color-sapphire;
-      padding: 25px;
       justify-content: center;
 
       @include vp-1365 {
-        padding: 20px;
         width: 205px;
         margin: 0 auto;
       }
@@ -289,33 +246,72 @@
       @include vp-767 {
         font-family: $ff-robotocondensed;
         font-weight: 700;
-        padding: 21px 20px 19px;
       }
+    }
+  }
+}
 
-      &:hover,
-      &:focus,
-      &:focus-visible {
-        color: $color-default-white;
-        background: $button-gradient;
-        border: none;
-        outline: none;
+.subscription__item {
+  border: 7px solid $color-default-white;
 
-        @include vp-1365 {
-          padding: 22px;
-        }
+  a {
+    color: $color-sapphire;
+    border-color: $color-sapphire;
+    padding: 25px;
+
+    @include vp-1365 {
+      padding: 20px;
+    }
+
+    @include vp-767 {
+      padding: 21px 20px 19px;
+    }
+
+    @include hover-focus {
+      color: $color-default-white;
+      background: $button-gradient;
+      border: none;
+      outline: none;
+
+      @include vp-1365 {
+        padding: 22px;
       }
+    }
 
-      &:active {
-        color: $color-white-70;
-        background: $button-gradient;
-        border: none;
-        outline: none;
+    &:active {
+      color: $color-white-70;
+      background: $button-gradient;
+      border: none;
+      outline: none;
+    }
+
+    &:disabled,
+    &--disabled {
+      opacity: 0.3;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  &--attract {
+    border: 7px solid;
+    border-image: $border-gradient 1;
+
+    a {
+      color: $color-default-white;
+      background: $button-gradient;
+      border: none;
+      outline: none;
+      padding: 27px;
+
+      @include vp-1365 {
+        padding: 22px;
       }
+    }
 
-      &--disabled {
-        opacity: 0.3;
-        pointer-events: none;
-        cursor: default;
+    p {
+      @include vp-1365 {
+        color: $color-chambray;
       }
     }
   }
@@ -340,6 +336,27 @@
 
     @include vp-1365 {
       width: 326px;
+    }
+  }
+}
+
+[data-parent] {
+  &::before {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+    color: $color-whisper-48;
+    z-index: -1;
+    content: attr(data-parent);
+
+    @include vp-1365 {
+      top: 0;
+    }
+
+    @include vp-767 {
+      font-size: 80px;
     }
   }
 }

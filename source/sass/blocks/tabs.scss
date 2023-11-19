@@ -3,13 +3,13 @@
 }
 
 .tabs__controls {
-  @media screen and (max-width: 767px) {
+  @media (min-width: $vp-767) {
     flex-wrap: wrap;
   }
 }
 
 .tabs__content {
-  @media screen and (max-width: 767px) {
+  @media (min-width: $vp-767) {
     flex-wrap: wrap;
     flex-direction: row;
   }
