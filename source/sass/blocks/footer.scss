@@ -115,10 +115,6 @@
     color: $color-default-white;
     padding: 5px 10px;
 
-    // @include vp-767 {
-    //   line-height: 20px;
-    // }
-
     &:hover {
       text-decoration: underline;
       text-underline-offset: 8px;
@@ -128,7 +124,8 @@
       outline: 1px solid $color-default-white;
     }
 
-    &[disabled] {
+    &:disabled,
+    &--disabled {
       opacity: 0.4;
       pointer-events: none;
       cursor: default;
@@ -179,7 +176,8 @@
       color: $color-default-white;
     }
 
-    &[disabled] {
+    &:disabled,
+    &--disabled {
       opacity: 0.3;
       pointer-events: none;
       cursor: default;

@@ -87,7 +87,7 @@
   grid-template-columns: 180px 92px;
   grid-template-rows: repeat(3, min-content);
   column-gap: 68px;
-  row-gap:  23px;
+  row-gap: 23px;
 
   @include vp-1365 {
     padding: 40px 45px 45px;
@@ -186,7 +186,7 @@
 
   span {
     grid-column: 1/ -1;
-  };
+  }
 }
 
 .supergames__time {

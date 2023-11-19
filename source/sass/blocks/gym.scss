@@ -66,7 +66,6 @@
       margin-bottom: 13px;
       padding: 0;
       padding-top: 6px;
-
     }
   }
 
@@ -98,7 +97,7 @@
     display: block;
     margin: 0;
 
-    @media screen and (min-width: 767px) {
+    @media (min-width: $vp-767) {
       br {
         display: none;
       }
@@ -129,7 +128,7 @@
   position: relative;
 }
 
-.gym__image  {
+.gym__image {
   height: 401px;
   margin: 0 auto;
   background-color: $color-spindle;
@@ -327,13 +326,12 @@ iframe {
     border: 2px solid $color-sapphire;
     background: transparent;
     outline: none;
-    }
+  }
 
   &:hover svg,
   &:focus svg,
   &:focus-visible svg,
   &:active svg {
-    @include hover;
     color: $color-sapphire;
     outline: none;
   }

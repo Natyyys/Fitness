@@ -125,7 +125,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: calc(100% - 20px);
       height: 1px;
       background-color: $color-default-white;
@@ -135,9 +135,7 @@
 
     &:not([disabled]):focus {
       outline: 1px solid $color-default-white;
-    }
 
-    &:not([disabled]):focus {
       &::after {
         display: none;
       }
@@ -155,7 +153,8 @@
       opacity: 1;
     }
 
-    &[disabled] {
+    &:disabled,
+    &--disabled {
       opacity: 0.3;
       pointer-events: none;
       cursor: default;
@@ -249,7 +248,7 @@
 
   li {
     border: 7px solid;
-    border-image:  $border-gradient-1 1;
+    border-image: $border-gradient-1 1;
     padding: 23px 28px 28px;
     color: $color-resolution-blue;
 

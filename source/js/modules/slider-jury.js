@@ -4,8 +4,7 @@ const jurySlider = document.querySelector('[data-jury-slider]');
 const buttonNext = document.querySelector('[data-jury-next]');
 const buttonPrev = document.querySelector('[data-jury-prev]');
 
-const initJurySlider = () => {
-
+function setJurySlider() {
   return new Swiper(jurySlider, {
     navigation: {
       nextEl: buttonNext,
@@ -40,12 +39,12 @@ const initJurySlider = () => {
       },
     },
   });
-};
+}
 
-const setInitJurySlider = () => {
+const initJurySlider = () => {
   if (jurySlider) {
-    initJurySlider();
+    setJurySlider();
   }
 };
 
-export {setInitJurySlider};
+export {initJurySlider};

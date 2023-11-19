@@ -66,7 +66,7 @@
     padding: 60px;
     color: $color-default-white;
     background-color: $color-resolution-blue;
-    box-shadow: 0px 0px 40px 0px rgba(28, 51, 116, 0.20);
+    box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
 
     @include vp-1365 {
       padding: 60px 70px 60px 65px;
@@ -196,7 +196,7 @@
     }
 
     svg {
-      transform: translateX(-13%);
+      transform: rotate(180deg) translateX(-13%);
     }
   }
 
@@ -218,10 +218,6 @@
     opacity: 0.3;
     border: none;
   }
-}
-
-.reviews__button--next svg {
-  transform: rotate(180deg) translateX(-13%);
 }
 
 .reviews__button::after {

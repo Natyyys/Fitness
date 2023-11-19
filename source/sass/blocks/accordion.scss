@@ -111,9 +111,8 @@
     line-height: 1;
     color: $color-sapphire;
     width: 90%;
-    margin: 0;
 
-    @media screen and (min-width: 1366px) {
+    @media (min-width: $vp-1366) {
       br {
         display: none;
       }
@@ -152,7 +151,7 @@
     &::before,
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 20px;
       height: 1px;
       background-color: $color-resolution-blue;

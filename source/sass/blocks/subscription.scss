@@ -117,14 +117,13 @@
   }
 
   ul {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    margin: 0 auto;
 
     @include vp-1365 {
       flex-direction: column;
@@ -160,7 +159,7 @@
 
     &.is-active {
       border: 7px solid;
-      border-image:  $border-gradient 1;
+      border-image: $border-gradient 1;
 
       a {
         color: $color-default-white;
@@ -260,16 +259,13 @@
         top: 12px;
         left: 50%;
         transform: translateX(-50%);
-
         font-size: 100px;
         color: $color-whisper-48;
-
         z-index: -1;
         content: attr(data-parent);
 
         @include vp-1365 {
           top: 0;
-
         }
 
         @include vp-767 {
@@ -293,7 +289,7 @@
       @include vp-767 {
         font-family: $ff-robotocondensed;
         font-weight: 700;
-        padding: 21px 20px 19px 20px;
+        padding: 21px 20px 19px;
       }
 
       &:hover,
@@ -301,7 +297,6 @@
       &:focus-visible {
         color: $color-default-white;
         background: $button-gradient;
-        // padding: 27px;
         border: none;
         outline: none;
 
@@ -314,7 +309,7 @@
         color: $color-white-70;
         background: $button-gradient;
         border: none;
-        outline: none;;
+        outline: none;
       }
 
       &--disabled {

@@ -4,7 +4,7 @@ const reviewsSlider = document.querySelector('[data-reviews-slider]');
 const buttonNext = document.querySelector('[data-reviews-next]');
 const buttonPrev = document.querySelector('[data-reviews-prev]');
 
-const initReviewsSlider = () => {
+function setReviewsSlider() {
   return new Swiper(reviewsSlider, {
     navigation: {
       nextEl: buttonNext,
@@ -29,12 +29,12 @@ const initReviewsSlider = () => {
       },
     },
   });
-};
+}
 
-const setInitReviewsSlider = () => {
+const initReviewsSlider = () => {
   if (reviewsSlider) {
-    initReviewsSlider();
+    setReviewsSlider();
   }
 };
 
-export {setInitReviewsSlider};
+export {initReviewsSlider};
