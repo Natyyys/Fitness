@@ -183,16 +183,22 @@
     padding: 20px;
   }
 
-  &:hover,
-  &:focus,
+  &:hover:not([disabled]),
+  &:focus:not([disabled]),
   &:focus-visible {
     background-color: $color-default-white;
     color: $color-egyptian-blue;
     outline: none;
   }
 
-  &:active {
+  &:active:not([disabled]) {
     background-color: $color-default-white;
     color: $color-sapphire;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
   }
 }

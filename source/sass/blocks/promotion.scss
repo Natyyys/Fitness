@@ -133,7 +133,12 @@
       left: 10px;
     }
 
-    &:not([disabled]):focus {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus-within,
+    &:focus-visible {
       outline: 1px solid $color-default-white;
 
       &::after {
@@ -141,23 +146,8 @@
       }
     }
 
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:focus {
-      outline: $color-default-white;
-    }
-
     &:active {
       opacity: 1;
-    }
-
-    &:disabled,
-    &--disabled {
-      opacity: 0.3;
-      pointer-events: none;
-      cursor: default;
     }
   }
 
@@ -293,7 +283,8 @@
       background-color: $color-sapphire;
     }
 
-    &:not([disabled]):focus {
+    &:focus-within,
+    &:focus-visible {
       outline: 1px solid $color-sapphire;
     }
   }
@@ -301,4 +292,14 @@
 
 .promotion__image {
   background-color: $color-spindle;
+}
+
+.promotion__info-link,
+.promotion__other-link {
+  &:disabled,
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+  }
 }

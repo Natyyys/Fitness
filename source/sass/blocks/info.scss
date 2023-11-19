@@ -317,19 +317,26 @@
       line-height: 20px;
     }
   }
+}
 
-  a {
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      opacity: 0.5;
-      outline: none;
-    }
+.info__contacts-link {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.5;
+    outline: none;
+  }
 
-    &:active {
-      color: $color-sapphire;
-      text-decoration: underline;
-      text-underline-offset: 6px;
-    }
+  &:active {
+    color: $color-sapphire;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
   }
 }

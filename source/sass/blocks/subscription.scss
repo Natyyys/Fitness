@@ -88,24 +88,21 @@
     padding-bottom: 15px;
   }
 
-  @include hover-focus {
+  &:hover:not([disabled]),
+  &:active:not([disabled]),
+  &:focus:not([disabled]),
+  &.is-active {
     color: $color-sapphire;
     border-bottom: 2px solid $color-crimson;
     margin-bottom: -2px;
     outline: none;
   }
 
-  &:active,
-  &.is-active {
-    color: $color-sapphire;
-    border-bottom: 2px solid $color-crimson;
-    margin-bottom: -2px;
-  }
-
-  &:disabled,
+  &[disabled],
   &--disabled {
     opacity: 0.3;
     border: none;
+    margin-bottom: -2px;
   }
 }
 

@@ -1569,7 +1569,7 @@ button,
   text-transform: uppercase;
   border: 2px solid #ffffff;
 }
-.btn:disabled {
+.btn:disabled, .btn--disabled {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -1950,14 +1950,19 @@ button,
     padding: 20px;
   }
 }
-.hero__button:hover, .hero__button:focus, .hero__button:focus-visible {
+.hero__button:hover:not([disabled]), .hero__button:focus:not([disabled]), .hero__button:focus-visible {
   background-color: #ffffff;
   color: #103aae;
   outline: none;
 }
-.hero__button:active {
+.hero__button:active:not([disabled]) {
   background-color: #ffffff;
   color: #102654;
+}
+.hero__button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
 }
 
 .gym {
@@ -2449,28 +2454,16 @@ button,
     padding-bottom: 15px;
   }
 }
-@media (hover: hover) {
-  .subscription__button:hover:not(.focus-visible) {
-    color: #102654;
-    border-bottom: 2px solid #d10a42;
-    margin-bottom: -2px;
-    outline: none;
-  }
-}
-.subscription__button.focus-visible:focus {
+.subscription__button:hover:not([disabled]), .subscription__button:active:not([disabled]), .subscription__button:focus:not([disabled]), .subscription__button.is-active {
   color: #102654;
   border-bottom: 2px solid #d10a42;
   margin-bottom: -2px;
   outline: none;
 }
-.subscription__button:active, .subscription__button.is-active {
-  color: #102654;
-  border-bottom: 2px solid #d10a42;
-  margin-bottom: -2px;
-}
-.subscription__button:disabled, .subscription__button--disabled {
+.subscription__button[disabled], .subscription__button--disabled {
   opacity: 0.3;
   border: none;
+  margin-bottom: -2px;
 }
 
 .subscription__content {
@@ -3925,25 +3918,17 @@ button,
   bottom: 7px;
   left: 10px;
 }
-.promotion__wrapper a:not([disabled]):focus {
-  outline: 1px solid #ffffff;
-}
-.promotion__wrapper a:not([disabled]):focus::after {
-  display: none;
-}
 .promotion__wrapper a:hover {
   opacity: 0.8;
 }
-.promotion__wrapper a:focus {
-  outline: #ffffff;
+.promotion__wrapper a:focus-within, .promotion__wrapper a:focus-visible {
+  outline: 1px solid #ffffff;
+}
+.promotion__wrapper a:focus-within::after, .promotion__wrapper a:focus-visible::after {
+  display: none;
 }
 .promotion__wrapper a:active {
   opacity: 1;
-}
-.promotion__wrapper a:disabled, .promotion__wrapper a--disabled {
-  opacity: 0.3;
-  pointer-events: none;
-  cursor: default;
 }
 .promotion__wrapper img {
   display: block;
@@ -4115,12 +4100,20 @@ button,
 .promotion__other a::after {
   background-color: #102654;
 }
-.promotion__other a:not([disabled]):focus {
+.promotion__other a:focus-within, .promotion__other a:focus-visible {
   outline: 1px solid #102654;
 }
 
 .promotion__image {
   background-color: #b6bdcc;
+}
+
+.promotion__info-link:disabled, .promotion__info-link--disabled,
+.promotion__other-link:disabled,
+.promotion__other-link--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
 }
 
 .faq {
@@ -5192,14 +5185,20 @@ button,
     line-height: 20px;
   }
 }
-.info__contacts-wrapper a:hover, .info__contacts-wrapper a:focus, .info__contacts-wrapper a:focus-visible {
+
+.info__contacts-link:hover, .info__contacts-link:focus, .info__contacts-link:focus-visible {
   opacity: 0.5;
   outline: none;
 }
-.info__contacts-wrapper a:active {
+.info__contacts-link:active {
   color: #102654;
   text-decoration: underline;
   text-underline-offset: 6px;
+}
+.info__contacts-link:disabled, .info__contacts-link--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
 }
 
 .footer__wrapper {
@@ -5288,14 +5287,15 @@ button,
     padding: 18px 20px 10px 1px;
   }
 }
-.footer__logo a:hover, .footer__logo a:focus, .footer__logo a:focus-visible, .footer__logo a:active {
+@media (hover: hover) {
+  .footer__logo a:hover:not(.focus-visible) {
+    opacity: 0.5;
+    outline: none;
+  }
+}
+.footer__logo a.focus-visible:focus {
   opacity: 0.5;
   outline: none;
-}
-.footer__logo a:disabled {
-  opacity: 0.3;
-  pointer-events: none;
-  cursor: default;
 }
 @media (max-width: 1365px) {
   .footer__logo a svg {
@@ -5349,14 +5349,15 @@ button,
   color: #ffffff;
   padding: 5px 10px;
 }
-.footer__menu a:hover {
+
+.footer__menu-link:hover {
   text-decoration: underline;
   text-underline-offset: 8px;
 }
-.footer__menu a:focus-visible {
+.footer__menu-link:focus, .footer__menu-link:focus-visible {
   outline: 1px solid #ffffff;
 }
-.footer__menu a:disabled, .footer__menu a--disabled {
+.footer__menu-link:disabled, .footer__menu-link--disabled {
   opacity: 0.4;
   pointer-events: none;
   cursor: default;
@@ -5397,20 +5398,6 @@ button,
   border-radius: 50%;
   background-color: #ffffff;
 }
-.footer__social a:hover, .footer__social a:focus, .footer__social a:focus-visible {
-  background-color: #103aae;
-  outline: none;
-  color: #ffffff;
-}
-.footer__social a:active {
-  background-color: #102654;
-  color: #ffffff;
-}
-.footer__social a:disabled, .footer__social a--disabled {
-  opacity: 0.3;
-  pointer-events: none;
-  cursor: default;
-}
 .footer__social svg {
   position: absolute;
   top: 50%;
@@ -5418,4 +5405,29 @@ button,
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media (hover: hover) {
+  .footer__social-link:hover:not(.focus-visible) {
+    background-color: #103aae;
+    outline: none;
+    color: #ffffff;
+  }
+}
+.footer__social-link.focus-visible:focus {
+  background-color: #103aae;
+  outline: none;
+  color: #ffffff;
+}
+.footer__social-link:active {
+  background-color: #102654;
+  color: #ffffff;
+}
+.footer__social-link:disabled, .footer__social-link--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+.footer__social-link:disabled svg, .footer__social-link--disabled svg {
+  color: #030a1a;
 }
