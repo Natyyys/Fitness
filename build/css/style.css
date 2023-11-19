@@ -1611,6 +1611,7 @@ button,
   -ms-flex-negative: 0;
       flex-shrink: 0;
   outline: none;
+  margin-right: 20px;
 }
 @media (max-width: 767px) {
   .main-header__logo {
@@ -1864,13 +1865,11 @@ button,
 
 .hero__image {
   max-width: 500px;
-  max-height: 524px;
   background-color: #b6bdcc;
 }
 @media (max-width: 1365px) {
   .hero__image {
     max-width: 324px;
-    max-height: 390px;
   }
 }
 @media (max-width: 767px) {
@@ -1881,9 +1880,9 @@ button,
 .hero__image img {
   display: block;
   max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
@@ -1928,6 +1927,9 @@ button,
 
 .hero__button {
   min-width: 230px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 26px 54px 24px;
 }
 @media (max-width: 1365px) {
@@ -2520,6 +2522,9 @@ button,
   padding: 60px 70px 58px 71px;
   background-color: #ffffff;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2554,6 +2559,9 @@ button,
   text-align: center;
   margin: 0;
   margin-bottom: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media (max-width: 1365px) {
   .subscription__content li h3 {
@@ -2571,6 +2579,9 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 300;
   margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media (max-width: 767px) {
   .subscription__content li p {
@@ -3048,6 +3059,7 @@ button,
 }
 .supergames__image img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -4294,6 +4306,7 @@ button,
 .faq__content ul {
   margin: 0;
   padding: 0;
+  width: 100%;
   list-style: none;
   border-top: 1px solid rgba(28, 51, 116, 0.2);
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
@@ -5201,6 +5214,8 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 @media (max-width: 1365px) {
   .footer__wrapper-nav {
@@ -5214,7 +5229,7 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 45px;
+    padding-bottom: 35px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -5249,19 +5264,19 @@ button,
 }
 .footer__logo a {
   display: block;
-  padding: 36px 0 30px 1px;
+  padding: 26px 0 20px 1px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 @media (max-width: 1365px) {
   .footer__logo a {
-    padding-top: 37px;
+    padding-top: 27px;
   }
 }
 @media (max-width: 767px) {
   .footer__logo a {
-    padding: 28px 20px 10px 1px;
+    padding: 18px 20px 10px 1px;
   }
 }
 .footer__logo a:hover, .footer__logo a:focus, .footer__logo a:focus-visible, .footer__logo a:active {

@@ -145,6 +145,7 @@
     padding: 60px 70px 58px 71px;
     background-color: $color-default-white;
     text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -169,6 +170,7 @@
       text-align: center;
       margin: 0;
       margin-bottom: 8px;
+      width: fit-content;
 
       @include vp-1365 {
         font-size: 24px;
@@ -185,6 +187,7 @@
       font-family: $ff-robotocondensed;
       font-weight: 300;
       margin: 0;
+      width: fit-content;
 
       @include vp-767 {
         font-size: 14px;
